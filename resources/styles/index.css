@@ -1,0 +1,13 @@
+#aboutContent {
+}
+
+#aboutContent h3 {
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+}
+
+div.infoBox #schoolDate {
+    display:inline;
+    float: right;
+    padding-right: 1em;
+}

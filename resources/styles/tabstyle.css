@@ -1,0 +1,65 @@
+article.tabs {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+}
+
+article.tabs input:nth-of-type(2):not(:checked) ~ input:nth-of-type(3):not(:checked) ~ input:nth-of-type(4):not(:checked)~ input:nth-of-type(5):not(:checked) ~ section:nth-of-type(1),
+article.tabs input:nth-of-type(1):checked ~ section:nth-of-type(1),
+article.tabs input:nth-of-type(2):checked ~ section:nth-of-type(2),
+article.tabs input:nth-of-type(3):checked ~ section:nth-of-type(3),
+article.tabs input:nth-of-type(4):checked ~ section:nth-of-type(4),
+article.tabs input:nth-of-type(5):checked ~ section:nth-of-type(5) {
+  display: block;
+}
+
+article.tabs input {
+    display: none;
+}
+
+article.tabs label {
+    cursor: pointer;
+    padding: 0 1em;
+    margin: 0;
+    color: #999;
+    background-color: #ddd;
+    border-width: 2px;
+    border-radius: 5px 5px 0 0;
+    border-top: 2px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    font-size: 14pt;
+    font-family: 'Oleo Script', Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+article.tabs label:hover {
+    -webkit-transition: background-color 500ms;
+    background-color: #F5F5F5;
+}
+
+article.tabs input[type=radio]:checked + label {
+    background-color: #FFF;
+} 
+
+article.tabs section:checked h3 {
+    color: #333;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+article.tabs section {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+
+article.tabs section > div {
+    margin-top: 1.5em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}

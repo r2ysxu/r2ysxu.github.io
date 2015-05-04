@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" type="text/css" href="resources/styles/index.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/banner.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/tabstyle.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/common.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/projects.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/modalPopup.css" />
+        <link href="http://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="scripts/banner.js"></script>
+    </head>
+    <body>
+        <!-- Banner -->
+        <div id="banner">
+            <div id="bannerName">
+                <h1>Arthur Xu</h1>
+            </div>
+            <hr />
+            <table id="bannerTable">
+                <tr>
+                    <td><a href="#aboutContent"><div>About</div></a></td>
+                    <td><a href="#projectContent"><div>Projects</div></a></td>
+                    <td><a href="resume-printable.html"><div>Resume</div></a></td>
+                </tr>
+            </table>
+            <hr />
+            <div id="bannerFooter">
+            </div>
+        </div>
+        <div id="bannerFill"></div>
+        <div id="aboutContent">
+            <h2>About Me</h2>
+            <div id="aboutMeDiv" class="infoBox">
+                <span>some stuff about me blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</span>
+            </div>
+            <h2>Qualifications</h2>
+            <div id="qualifications">
+                <article class="tabs">
+                    <input checked type="radio" name="tab" id="tab1">
+                        <label for="tab1">Server Side</label>
+                    <input type="radio" name="tab" id="tab2">
+                        <label for="tab2">Front End</label>
+                    <input type="radio" name="tab" id="tab3">
+                        <label for="tab3">Tools &amp; Design</label>
+                    <input type="radio" name="tab" id="tab4">
+                        <label for="tab4">Non-Web</label>
+                    <input type="radio" name="tab" id="tab5">
+                        <label for="tab5">Servers</label>
+                    <section id="tab1-serverside">
+                        <div id="serverSideDiv">
+                            <h4>Java EE Technology</h4>
+                            <ul>
+                                <li>J2EE Servlets &amp; EJB 3</li>
+                                <li>J2EE Websocket</li>
+                                <li>SpringMVC &amp; SpringBatch</li>
+                                <li>Hibernate</li>
+                                <li>REST via JAX-RS</li>
+                                <li>JSF &amp; ICEFaces Framework</li>
+                                <li>JSP &amp; Apache Struts</li>
+                            </ul>
+                            <h4>Databases</h4>
+                            <ul>
+                                <li>Sqlite</li>
+                                <li>MySQL</li>
+                                <li>Oracle</li>
+                            </ul>
+                            <h4>C#</h4>
+                            <ul>
+                                <li>C# .NET framework</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="tab2-frontend">
+                        <div id="frontEndDiv" class="tabDiv">
+                            <h4>HTML 5</h4>
+                            <h4>CSS 3</h4>
+                            <h4>Javascript</h4>
+                            <ul>
+                                <li>Javascript, Ajax</li>
+                                <li>jQuery</li>
+                                <li>Three.js</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="tab3-tools">
+                        <div id="toolsDiv" class="tabDiv">
+                            <h4>Source Control</h4>
+                            <ul>
+                                <li>Git</li>
+                                <li>SVN</li>
+                                <li>CVS</li>
+                            </ul>
+                            <h4>Design</h4>
+                            <ul>
+                                <li>XML, XSD</li>
+                                <li>UML</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="tab4-nonweb">
+                        <div id="nonWebDiv" class="tabDiv">
+                            <h4>Android</h4>
+                            <ul>
+                                <li>OpenGL ES 2.0</li>
+                            </ul>
+                            <h4>C, C++</h4>
+                        </div>
+                    </section>
+                    <section id="tab5-servers">
+                        <div id="serversDiv" class="tabDiv">
+                            <h4>Tomcat</h4>
+                            <h4>Glassfish</h4>
+                            <h4>Websphere</h4>
+                            <h4>Weblogic</h4>
+                            <h4>IIS</h4>
+                        </div>
+                    </section>
+                </article>
+            </div>
+            <div id="education">
+                <h2>Education</h2>
+                <div class="infoBox">
+                    <h3>University of Waterloo</h3>
+                    <span id="school">Computer Science Co-op with Minor in Economics</span>
+                    <span id="schoolDate"><i>Graduating Class of 2015</i></span>
+                </div>
+            </div>
+        </div>
+        <div id="projectContent">
+            <h2>Projects</h2>
+            <div id="projectDiv" class="infoBox">
+                <span>some stuff about my projects</span>
+                <br />
+                <div id="projectList">
+                    <a href="#ovaflowModal">
+                        <div id="ovaflow" class="modalOpener">
+                            <img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="logo" />
+                            <br />
+                            <span>Ovaflow</span>
+                        </div>
+                    </a>
+                    <a href="#chitchatModal">
+                        <div id="chitchat" class="modalOpener">
+                            <img id="chitchatLogo" src="resources/images/ovaflow-logo.png" class="logo" />
+                            <br />
+                            <span>Chitchat</span>
+                        </div>
+                    </a>
+                    <a href="#pictoviewModal">
+                        <div id="pictoview" class="modalOpener">
+                            <img id="pictoviewLogo" src="resources/images/ovaflow-logo.png" class="logo" />
+                            <br />
+                            <span>Pictoview</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Modals Dialogs -->
+        <div id="modals">
+            <a href="">
+                <div id="ovaflowModal" class="modalDialog">
+                    <iframe src="projects-1.html" class="modalFrame"></iframe>
+                </div>
+                <div id="chitchatModal" class="modalDialog">
+                    <iframe src="projects-2.html" class="modalFrame"></iframe>
+                </div>
+                <div id="pictoviewModal" class="modalDialog">
+                    <iframe src="projects-3.html" class="modalFrame"></iframe>
+                </div>
+            </a>
+        </div>
+        <footer>
+            <hr />
+            <p>Last updated on : 1 May 2015 <br />
+            Contact : <a href="mailto:r2ysxu@gmail.com">r2ysxu@gmail.com</a></p>
+        </footer>
+    </body>
+</html>
