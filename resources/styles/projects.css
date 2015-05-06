@@ -1,12 +1,9 @@
+article.tabs section {
+    height: 31em;
+    overflow: auto;
+}
+
 .logo {
     height: 10em;
-}
-
-.modalOpener {
-    text-align: center;
-    display: inline-block;
-}
-
-#projectList {
-    text-align: center;
+    float: right;
 }

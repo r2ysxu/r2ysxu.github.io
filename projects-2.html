@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Chitchat Project</title>
+        <link rel="stylesheet" type="text/css" href="resources/styles/common.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/tabstyle.css" />
+        <link rel="stylesheet" type="text/css" href="resources/styles/projects.css" />
+        <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <article class="tabs">
+            <input checked type="radio" name="tab" id="tab1">
+                <label for="tab1">Description</label>
+            <input type="radio" name="tab" id="tab2">
+                <label for="tab2">Implementation</label>
+            <section>
+                <div id="descDiv">
+                    <h3>Chitchat</h3>
+                    <p><img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="logo" /> Chit-chat is an interactive chat-room where participants can talk to each other. Aside from being able to talk to each other, they can also walk and jump around in their avatars which can be seen by other participants.</p>
+                    <p>This started as a one day/night exerpiment where I wanted to learn about Java Websockets as well as WebGL. </p>
+                    <p>The sprites are not drawn by me and will be replaced upon request from the original author. This is a simple exerpiment and I do not intend to infringe on any copyright.</p>
+                </div>
+            </section>
+            <section>
+                <div id="designDiv">
+                    <p>The web application is developed using websockets using javascript to connect to a Java Websocket service.</p>
+                    <h3>Client</h3>
+                    <p>The client consists of HTML5 components. Javascripts using WebGL as well as AJAX calls to the websocket. JSON is (temporarily) used to convey all messages. (In the future, I would like to send encoded byte streams)</p>
+                    <h3>Server</h3>
+                    <p>The server uses Java Websockets to relay messages to all participating parties by encapsulating them through JSON request/responses</p>
+                    <hr />
+                    <p><strong>Status : </strong>Limited Functionality &amp; unpolished</p>
+                    <p><strong>Code : </strong><a href="https://github.com/r2ysxu/Chitchat">github.com</a></p>
+                </div>
+            </section>
+        </article>
+    </body>
+</html>

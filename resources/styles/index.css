@@ -11,3 +11,11 @@ div.infoBox #schoolDate {
     float: right;
     padding-right: 1em;
 }
+
+.logo {
+    height: 10em;
+}
+
+#projectList {
+    text-align: center;
+}

@@ -29,5 +29,11 @@
     background: -moz-linear-gradient(#fff, #999);
     background: -webkit-linear-gradient(#fff, #999);
     background: -o-linear-gradient(#fff, #999);
+    height : 35em;
+    overflow: hidden;
+}
+
+.modalOpener {
     text-align: center;
+    display: inline-block;
 }

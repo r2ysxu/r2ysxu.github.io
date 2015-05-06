@@ -4,19 +4,18 @@
         <link rel="stylesheet" type="text/css" href="resources/styles/common.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/tabstyle.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/projects.css" />
-        <link rel="stylesheet" type="text/css" href="resources/styles/project1.css" />
         <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
     </head>
     <body>
         <article class="tabs">
-                <input checked type="radio" name="tab" id="tab1">
-                        <label for="tab1">Description</label>
-                    <input type="radio" name="tab" id="tab2">
-                        <label for="tab2">Implementation</label>
+            <input checked type="radio" name="tab" id="tab1">
+                <label for="tab1">Description</label>
+            <input type="radio" name="tab" id="tab2">
+                <label for="tab2">Implementation</label>
             <section>
                 <div id="descDiv">
-                    <h4>Ovaflow</h4>
-                    <p>Ovaflow is a light-weight rhythm game fueled by the user community. (similar to step-mania) Currently developed for the Android platform only. The objective of the game is to press the correct sequence of keys or buttons as notes cascade down the screen towards a special buttons on the screen. The game&#39;s score will be calculated based on the accuracy of the button presses atop some precision tolerance, and might end prematurely if the user makes too many errors. The differentiating factor is that all the "beatmaps" are created by users which may be uploaded onto the central repository and downloaded along with avatars.</p>
+                    <h3>Ovaflow</h3>
+                    <p><img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="logo" />Ovaflow is a light-weight rhythm game fueled by the user community. (similar to step-mania) Currently developed for the Android platform only. The objective of the game is to press the correct sequence of keys or buttons as notes cascade down the screen towards a special buttons on the screen. The game&#39;s score will be calculated based on the accuracy of the button presses atop some precision tolerance, and might end prematurely if the user makes too many errors. The differentiating factor is that all the "beatmaps" are created by users which may be uploaded onto the central repository and downloaded along with avatars.</p>
                     <p>What started as a simple prototype for a class ended as a fully functional game. I was primarily responsible for the Android platform but also built up the initial framework for the server</p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/1MVlc_PlqHs" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -24,10 +23,11 @@
             <section>
                 <div id="designDiv">
                     <p>The project is divided into two parts, the Android platform (Client) and the server repository.</p>
-                    <h4>Client</h4>
+                    <h3>Client</h3>
                     <p>The Client only supports Android devices. The rendering is done by using OpenGL ES 2.0. The rendering is displayed via a SurfaceView. The downloading of songs is done by sending REST-ful requests to the server and using <i>AsyncTasks</i> to fetch the songs over a stream.</p>
-                    <h4>Server</h4>
+                    <h3>Server</h3>
                     <p>The server provides the user high scores, avatars, and a song repository accessed via JAX-RS</p>
+                    <hr />
                     <p><strong>Status : </strong>Functional</p>
                     <p><strong>Code : </strong><a href="https://github.com/r2ysxu/Ovaflow-Android">github.com</a></p>
                 </div>
