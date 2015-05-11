@@ -26,6 +26,11 @@
     to {top: -1px;}
 }
 
+@-o-keyframes showbanner {
+    from {top: -200px;}
+    to {top: -1px;}
+}
+
 #bannerName {
     color: white;
     text-align: center;
@@ -50,6 +55,7 @@
     animation-name: showbanner 1s forwards;
     -webkit-animation: showbanner 1s forwards;
     -moz-animation: showbanner 1s forwards;
+    -o-animations: showbanner 1s forwards;
     top: -1px;
 }
 

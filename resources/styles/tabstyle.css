@@ -35,6 +35,8 @@ article.tabs label {
 
 article.tabs label:hover {
     -webkit-transition: background-color 500ms;
+    -moz-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
     background-color: #F5F5F5;
 }
 
