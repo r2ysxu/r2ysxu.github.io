@@ -7,3 +7,7 @@ article.tabs section {
     height: 10em;
     float: right;
 }
+
+.demoDiv {
+    text-align: center;
+}
