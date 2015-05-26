@@ -24,16 +24,19 @@
                     <p>The project is divided into three Components, the client, the request server, and the Enterprise Java Bean.</p>
                     <h3>Client</h3>
                     <h4>Android</h4>
-                        <p>The Android client uses volley to send HTTP requests to retrieve informations &amp; photos from the server using REST-ful API.</p>
+                        <p>The Android client uses volley to send HTTP requests to retrieve informations &amp; photos from the server using REST-ful API. <i>(Currently in development)</i></p>
                     <h4>Browser</h4>
-                        <p>Currently not supported</p>
+                        <p>The browser is partially generated HTML page via JSP, with dynamically generated content via Ajax calls. Uses jQuery to process client response data and page dynamics.</p>
                     <h3>Server</h3>
+                    <h4>Spring</h4>
+                        <p>Uses Spring MVC to generate client JSP pages as well as Ajax JSON responses. Images are send via output streams.
+                        </p>
                     <h4>REST</h4>
                         <p>Uses JAX-RS to supply API calls to the client. The information is taken from the enterprise bean.</p>
                     <h4>EJB</h4>
                     <p>The EJB provides access to the database which stores all the images and their information</p>
                     <hr />
-                    <p><strong>Status : </strong>Early Stages, Limited Functionality, Very Unpolished</p>
+                    <p><strong>Status : </strong>Early Stages, Limited Functionality, Very Unpolished &amp; no UI beautification <i>(Currently in development)</i></p>
                     <p><strong>Code : </strong><a href="https://github.com/r2ysxu/Ovaflow-Android">github.com</a></p>
                 </div>
             </section>
