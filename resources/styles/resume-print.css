@@ -1,5 +1,5 @@
 body {
-    width: 800px;
+    width: 70em;
     margin: 0 auto;
     padding: 20px;
     font-family: Verdana, Arial;
@@ -76,4 +76,63 @@ a:link {color:#2554C7;text-decoration:none;}
 
 #technologies td {
     width: 33%;
+}
+
+/* Qualification Web Related  */
+
+.webContainer {
+    position: relative;
+    width: 100%;
+    height: 15em;
+    margin-top: 1em;
+    margin-bottom: -2em;
+}
+
+.webContent {
+    position: absolute;
+    background: white;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 0.5em;
+}
+
+@media screen {
+    .webContent {
+        border: 1px dashed grey;
+    }
+}
+
+@media print {
+    .webContent {
+    }
+}
+
+.c1 {
+    font-size: 18pt;
+    z-index: 6;
+}
+
+.c2 {
+    font-size: 16pt;
+    z-index: 5;
+}
+
+.c3 {
+    font-size: 14pt;
+    z-index: 4;
+}
+
+.c4 {
+    font-size: 12pt;
+    z-index: 3;
+}
+
+.c5 {
+    font-size: 10pt;
+    z-index: 2;
+}
+
+.c6 {
+    font-size: 8pt;
+    z-index: 1;
 }
