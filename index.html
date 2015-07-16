@@ -1,14 +1,14 @@
 <html>
     <head>
         <title>Home Page</title>
+        <link href="http://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="resources/styles/index.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/banner.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/tabstyle.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/common.css" />
         <link rel="stylesheet" type="text/css" href="resources/styles/modalPopup.css" />
-        <link href="http://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="scripts/banner.js"></script>
     </head>
@@ -42,17 +42,17 @@
             </div>
             <h2>Qualifications</h2>
             <div id="qualifications">
-                <article class="tabs">
-                    <input checked type="radio" name="tab" id="tab1">
-                        <label for="tab1">Server Side</label>
-                    <input type="radio" name="tab" id="tab2">
-                        <label for="tab2">Front End</label>
-                    <input type="radio" name="tab" id="tab3">
-                        <label for="tab3">Tools &amp; Design</label>
-                    <input type="radio" name="tab" id="tab4">
-                        <label for="tab4">Non-Web</label>
-                    <input type="radio" name="tab" id="tab5">
-                        <label for="tab5">Servers</label>
+                <article class="tabs tabsDesc">
+                    <input checked type="radio" name="tab" id="tab1_1">
+                        <label for="tab1_1">Server Side</label>
+                    <input type="radio" name="tab" id="tab1_2">
+                        <label for="tab1_2">Front End</label>
+                    <input type="radio" name="tab" id="tab1_3">
+                        <label for="tab1_3">Tools &amp; Design</label>
+                    <input type="radio" name="tab" id="tab1_4">
+                        <label for="tab1_4">Non-Web</label>
+                    <input type="radio" name="tab" id="tab1_5">
+                        <label for="tab1_5">Servers</label>
                     <section id="tab1-serverside">
                         <div id="serverSideDiv">
                             <h4>Java EE Technology</h4>
@@ -147,43 +147,35 @@
             <div id="projectDiv" class="infoBox">
                 <span><p>Below are some of my recent projects that I've done on my spare time.</p></span>
                 <div id="projectList">
-                    <a href="#ovaflowModal">
-                        <div id="ovaflow" class="modalOpener">
-                            <img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="logo" />
-                            <br />
-                            <span>Ovaflow</span>
-                        </div>
-                    </a>
-                    <a href="#chitchatModal">
-                        <div id="chitchat" class="modalOpener">
-                            <img id="chitchatLogo" src="resources/images/chitchat-logo.jpg" class="logo" />
-                            <br />
-                            <span>Chitchat</span>
-                        </div>
-                    </a>
-                    <a href="#pictoviewModal">
-                        <div id="pictoview" class="modalOpener">
-                            <img id="pictoviewLogo" src="resources/images/pictoview-logo.jpg" class="logo" />
-                            <br />
-                            <span>Pictoview</span>
-                        </div>
-                    </a>
+                    <div id="ovaflow" class="modalOpener" onclick="showModal('ovaflowModal');">
+                        <img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="logo" />
+                        <br />
+                        <span>Ovaflow</span>
+                    </div>
+                    <div id="chitchat" class="modalOpener" onclick="showModal('chitchatModal');">
+                        <img id="chitchatLogo" src="resources/images/chitchat-logo.jpg" class="logo" />
+                        <br />
+                        <span>Chitchat</span>
+                    </div>
+                    <div id="pictoview" class="modalOpener" onclick="showModal('pictoviewModal');">
+                        <img id="pictoviewLogo" src="resources/images/pictoview-logo.jpg" class="logo" />
+                        <br />
+                        <span>Pictoview</span>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Modals Dialogs -->
-        <div id="modals">
-            <a href="#projectContent">
-                <div id="ovaflowModal" class="modalDialog">
-                    <iframe src="projects-1.html" class="modalFrame"></iframe>
-                </div>
-                <div id="chitchatModal" class="modalDialog">
-                    <iframe src="projects-2.html" class="modalFrame"></iframe>
-                </div>
-                <div id="pictoviewModal" class="modalDialog">
-                    <iframe src="projects-3.html" class="modalFrame"></iframe>
-                </div>
-            </a>
+        <div id="modals" onclick="hideModal()">
+            <div id="ovaflowModal" class="modalDialog">
+                <iframe src="projects-1.html" name="project1" class="modalFrame"></iframe>
+            </div>
+            <div id="chitchatModal" class="modalDialog">
+                <iframe src="projects-2.html" class="modalFrame"></iframe>
+            </div>
+            <div id="pictoviewModal" class="modalDialog">
+                <iframe src="projects-3.html" class="modalFrame"></iframe>
+            </div>
         </div>
         <footer>
             <hr />

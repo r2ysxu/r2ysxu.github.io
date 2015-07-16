@@ -14,21 +14,26 @@
 }
 
 .modalDialog:target {
-    opacity:1;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.selectedDialog {
+    opacity: 1;
     pointer-events: auto;
 }
 
 .modalFrame {
     width: 80%;
     margin-left: 10%;
-    margin-top : 10%;
+    margin-top : 5vh;
     position: relative;
     border-radius: 5px;
     background: #fff;
     background: -moz-linear-gradient(#fff, #999);
     background: -webkit-linear-gradient(#fff, #999);
     background: -o-linear-gradient(#fff, #999);
-    height : 35em;
+    height : 90vh;
     overflow: hidden;
 }
 

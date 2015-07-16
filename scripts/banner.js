@@ -13,3 +13,17 @@ function checkBannerOnScroll() {
         document.getElementById("bannerFill").style.height = "0px";
     }
 }
+
+function showModal(id) {
+    document.getElementById(id).style.opacity = 1;
+    $('#' + id).addClass('selectedDialog');
+}
+
+function hideModal() {
+    document.getElementById('ovaflowModal').style.opacity = 0;
+    $('#ovaflowModal').removeClass('selectedDialog');
+    document.getElementById('chitchatModal').style.opacity = 0;
+    $('#chitchatModal').removeClass('selectedDialog');
+    document.getElementById('pictoviewModal').style.opacity = 0;
+    $('#pictoviewModal').removeClass('selectedDialog');
+}
