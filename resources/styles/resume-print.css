@@ -34,12 +34,6 @@ td {
 
 a:link {color:#2554C7;text-decoration:none;}
 
-.column-list {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-    -moz-column-count: 3; /* Firefox */
-    column-count: 3;
-}
-
 .title-text {
     font-size: 18pt;
 }
@@ -94,17 +88,6 @@ a:link {color:#2554C7;text-decoration:none;}
     padding-left: 0.3em;
     padding-right: 0.3em;
     border-radius: 0.5em;
-}
-
-@media screen {
-    .webContent {
-        border: 1px dashed grey;
-    }
-}
-
-@media print {
-    .webContent {
-    }
 }
 
 .c1 {
