@@ -1,32 +1,435 @@
-.center {
-    width: 800px;
-    margin: 0 auto;
+.noSelect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .mainContentDiv {
-	position: relative;
-	top: 230px;
+	width: 99%;
 	background-color: white;
 }
 
-#aboutContent {
+.computerContent {
+	width: 56.25em;
+	height: 43.75em;
 }
 
-#aboutContent h3 {
-    padding-bottom: 1px;
-    margin-bottom: 5px;
+.monitor {
+	position: relative;
+	padding: 1em;
+	height: 50em;
 }
 
-div.infoBox #schoolDate {
-    display:inline;
-    float: right;
-    padding-right: 1em;
+.computerScreen {
+	position: absolute;
+	width: 56.25em;
+	height: 43.75em;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 0.5em;
+	background-color: #F4F5EF;
+	border: outset 1px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
 }
 
-.logo {
+.monitorStand {
+	position: absolute;
+	width: 46.87em;
+	height: 5em;
+	top: 43.75em;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-color: #F4F5EF;
+  	border-radius: 20px 20px 0 0 / 60px 60px;
+	border: outset 1px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+}
+
+.monitorButton {
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	left: 49.5em;
+	top: 41.3em;
+	background-color: #F4F5EF;
+	border: ridge 2px;
+}
+
+.qualificationContent {
+	position: absolute;
+	top : 3.125em;
+	left: 0;
+	right: 0;
+	height: 37.5em;
+	width: 50em;
+	padding: 0.5em;
+	overflow: hidden;
+	overflow-x: hidden;
+	background-color: #3F6BA3;
+	border: inset;
+	box-shadow: inset 0 -15px 20px 0px rgba(0,0,0,0.75), inset 0 5px 20px 0px rgba(0,0,0,0.75);
+	margin: 0 auto;
+}
+
+.window {
+	position: absolute;
+	background-color: black;
+	border: ridge;
+	padding-left: 0.5em;
+	padding-right: 1em;
+	padding-top: 2em;
+	padding-bottom: 1em;
+}
+
+.windowMenuBar {
+	display: inline;
+	position: absolute;
+	border-bottom: ridge;
+	color: white;
+	top: 0em;
+	left: 0em;
+	width: 100%;
+	cursor: default;
+
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 47%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e5799), color-stop(47%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 47%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #1e5799 0%,#2989d8 47%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #1e5799 0%,#2989d8 47%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(135deg, #1e5799 0%,#2989d8 47%,#7db9e8 100%); /* W3C */
+}
+
+.windowButtons {
+	display: inline-block;
+	float: right;
+	margin-top: 0.15em;
+	margin-right: 0.2em;
+	text-align: center;
+}
+
+.windowButtons input {
+	border: outset 2px;
+}
+
+.windowTitle {
+	display: inline-block;
+	padding-left: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+.notepadText {
+	color: white;
+}
+
+.notepadTextTab1{
+	margin-left: 1.3em;
+}
+
+.reserveText {
+	color: #AB0055;
+}
+
+.browserBar {
+	background-color: #C0C0C0;
+	border-bottom: inset;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top:25px;
+}
+
+.browserBar input {
+	border: none;
+}
+
+.browserWindow {
+	width: 21.25em;
+	height: 17.5em;
+}
+
+.browserText {
+	padding: 2em 0;
+	color: white;
+}
+
+
+.taskbar {
+	position: absolute;
+	height: 1.56em;
+	top: 36.87em;
+	left: 0;
+	width: 100%;
+	background-color: #DED7CE;
+	border: outset 2px;
+}
+
+.taskbarBox {
+	display: none;
+}
+
+.taskbar label {
+	border: outset 2px;
+	padding: 1px 3px;
+}
+
+.taskbar input:checked + label {
+	border: inset 2px;
+}
+
+.taskbarLogo {
+	height: 16px;
+	vertical-align: middle;
+}
+
+.menuBarLogo {
+	height: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+	margin-top: 0;
+}
+
+.ieBar {
+	height: 30px;
+	margin: 0;
+}
+
+.startWindow {
+	position: absolute;
+	left: 0;
+	top : 17.4em;
+	width: 12em;
+	height: 19.37em;
+	background-color: #DED7CE;
+	border: outset 2px;
+	z-index: 3;
+}
+
+.startIcon {
+	vertical-align: middle;
+}
+
+.smallStartIcon {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	height: 2em;
+}
+
+.startProjectTab {
+	position: absolute;
+	left: 12.2em;
+	top: 21em;
+	width: 12em;
+	height: 7em;
+	background-color: #DED7CE;
+	border: outset 2px;
+	z-index: 3;
+}
+
+.startTab {
+
+}
+
+.startTab:hover {
+	background-color: blue;
+}
+
+.startArrow {
+	padding-left: 0.3em;
+	margin-top: 0.7em;
+	float: right;
+	width: 0; 
+	height: 0; 
+	border-top: 0.4em solid transparent;
+	border-bottom: 0.4em solid transparent;
+	border-left: 0.4em solid black;
+	vertical-align: middle;
+}
+
+.taskbarTasks {
+	height: 1.56em;
+	vertical-align: middle;
+	background-color: #DED7CE;
+}
+
+.desktopIconDiv {
+	position: absolute;
+	text-align: center;
+}
+
+.desktopIcon {
+	height: 2.5em;
+}
+
+.projectWindow {
+	padding: 0;
+}
+
+.windowProjectDesc {
+	margin-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: white;
+	width: 23em;
+	height: 30em;
+	color: black;
+	overflow: auto;
+}
+
+.projectLogo {
     height: 10em;
+    float: right;
 }
 
-#projectList {
+.projectOpener {
+	text-align: center;
+    display: inline-block;
+	border-radius: 15px;
+}
+
+.projectOpener:hover {
+	background-color: rgba(255, 153, 102, 0.4);
+}
+
+.projectList {
     text-align: center;
+}
+
+.selectedProject {
+	text-align: center;
+    display: inline-block;
+	border-radius: 15px;
+	background-color: #FF9966;
+}
+
+.projectDesc {
+	width: 50em;
+	margin: 1em auto;
+	border-radius: 15px;
+	padding: 1em;
+	background-color: #DED7CE;
+
+}
+
+.demoDiv {
+    text-align: center;
+}
+
+.floatingWords {
+	position: absolute;
+	font-size: 10pt;
+}
+
+.float1 {
+	-webkit-animation-name: float1;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.float2 {
+	-webkit-animation-name: float2;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.float3 {
+	-webkit-animation-name: float3;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.float4 {
+	-webkit-animation-name: float4;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes float1{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, -3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float2{
+    from {-webkit-transform:translate(0, 0px);}
+    45% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float3{
+    from {-webkit-transform:translate(0, 0px);}
+    60% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float4{
+    from {-webkit-transform:translate(0, 0px);}
+    55% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+.textInfo {
+	width: 50em;
+	margin: 0 auto;
+	border-radius: 15px;
+	padding: 1em;
+	background-color: #DED7CE;
+}
+
+.textTable {
+	width: 50em;
+	margin: 0 auto;
+	border-radius: 15px;
+	padding: 1em;
+	background-color: #DED7CE;
+}
+
+.textTable td {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.textTable ul {
+	margin-top: 0;
+	margin-left: 0;
+}
+
+.textTable h4 {
+	margin-bottom: 0;
+}
+
+.bgSpan {
+	margin-left: -1em;
+	padding: 1em;
+	width: 100%;
+	border-bottom: solid 1px #797977;
+}
+
+.bgColor1 {
+	background-color: #F4F5EF;
+}
+
+.bgColor2 {
+	background-color: #C9CAC7;
+}
+
+.bgColor3 {
+	background-color: #E4E4E4;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    text-align: center;
+    color: #333;
 }
