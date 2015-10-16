@@ -4,7 +4,10 @@
     border-top-right-radius: 5px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    width: 99%;
+    width: 100vw;
+    margin-top: -1em;
+    margin-left: -1em;
+    margin-bottom: 1em;
     z-index: 10;
 }
 
