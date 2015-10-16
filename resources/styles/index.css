@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+.mainContentDiv {
+	position: relative;
+	top: 230px;
+	background-color: white;
+}
+
 #aboutContent {
 }
 
