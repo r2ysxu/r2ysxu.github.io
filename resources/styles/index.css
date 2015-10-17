@@ -294,7 +294,7 @@
 }
 
 .projectOpener:hover {
-	background-color: rgba(255, 153, 102, 0.4);
+    background-color: rgba(0, 51, 204, 0.2);
 }
 
 .projectList {
@@ -305,7 +305,7 @@
 	text-align: center;
     display: inline-block;
 	border-radius: 15px;
-	background-color: #FF9966;
+    background-color: rgba(0, 51, 204, 0.5);
 }
 
 .projectDesc {
@@ -313,7 +313,7 @@
 	margin: 1em auto;
 	border-radius: 15px;
 	padding: 1em;
-	background-color: #DED7CE;
+    background-color: rgba(0, 51, 204, 0.3);
 
 }
 
@@ -383,7 +383,7 @@
 	margin: 0 auto;
 	border-radius: 15px;
 	padding: 1em;
-	background-color: #DED7CE;
+    background-color: rgba(255, 217, 55, 0.3);
 }
 
 .textTable {
@@ -391,7 +391,6 @@
 	margin: 0 auto;
 	border-radius: 15px;
 	padding: 1em;
-	background-color: #DED7CE;
 }
 
 .textTable td {
@@ -411,7 +410,7 @@
 .bgSpan {
 	margin-left: -1em;
 	padding: 1em;
-	width: 100%;
+    width: 100vw;
 	border-bottom: solid 1px #797977;
 }
 
@@ -420,11 +419,11 @@
 }
 
 .bgColor2 {
-	background-color: #C9CAC7;
+	background-color: rgba(255, 217, 55, 0.3);
 }
 
 .bgColor3 {
-	background-color: #E4E4E4;
+	background-color: rgba(0, 51, 204, 0.3);
 }
 
 footer {
