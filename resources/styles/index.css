@@ -184,6 +184,14 @@
 	display: none;
 }
 
+.clockTask {
+	float: right;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	margin-right: 0.5em;
+	border: inset 2px;
+}
+
 .taskbar label {
 	border: outset 2px;
 	padding: 1px 3px;
@@ -196,6 +204,7 @@
 .taskbarLogo {
 	height: 16px;
 	vertical-align: middle;
+	margin-bottom: 0.2em;
 }
 
 .menuBarLogo {

@@ -1,4 +1,5 @@
 function loadRepeatingDivs() {
+	clock();
 }
 
 function startDragWindow(elemid, event) {
@@ -47,6 +48,21 @@ function bringTofront(elem) {
 	document.getElementById('pictoviewDiv').style.zIndex = 1;
 
 	elem.style.zIndex = 2;
+}
+
+function clock() {
+	var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('clockTaskSpan').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(clock, 1000);
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 
 function stopDragWindow(elemid) {
