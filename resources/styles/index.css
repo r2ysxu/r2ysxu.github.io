@@ -243,7 +243,6 @@
 }
 
 .startServerTab {
-	padding-left: 1em;
 	position: absolute;
 	left: 12.2em;
 	top: 23.5em;
@@ -257,6 +256,7 @@
 .startServerTab h5 {
 	margin-top: 0.2em;
 	margin-bottom: 0.2em;
+	padding-left: 1em;
 }
 
 .startTab {
@@ -264,7 +264,7 @@
 }
 
 .startTab:hover {
-	background-color: blue;
+	background-color: #1e5799;
 }
 
 .startArrow {
