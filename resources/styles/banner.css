@@ -49,7 +49,7 @@
 }
 
 .relativeStatic {
-    position : relative;
+    position : static;
     top : 0px;
     opacity : 1;
 }
