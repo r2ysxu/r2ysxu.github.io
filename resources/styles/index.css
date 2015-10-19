@@ -471,3 +471,38 @@ footer {
     text-align: center;
     color: #333;
 }
+
+.shootUp {
+	animation-name: shootUp;
+    animation-duration: 1s;
+}
+
+.shootDown {
+	animation-name: shootDown;
+    animation-duration: 0.5s;
+}
+
+.flicker {
+	-webkit-animation-name: glow1;
+	-webkit-animation-duration: 4s;
+}
+
+@-webkit-keyframes glow1 {
+ from { opacity: 1; }
+  20% { opacity: 0.6; }
+  25% { opacity: 1; }
+  30% { opacity: 0.6; }
+  35% { opacity: 1; }
+  50% { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes shootDown {
+    from {-webkit-transform:translate(0, -100vh);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes shootUp {
+    from {-webkit-transform:translate(0, 100vh);}
+    to {-webkit-transform: translate(0, 0px);}
+}
