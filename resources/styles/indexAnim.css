@@ -1,0 +1,219 @@
+.shootUp {
+	animation-name: shootUp;
+    animation-duration: 1s;
+
+    -webkit-animation-name: shootUp;
+    -webkit-animation-duration: 1s;
+
+    -moz-animation-name: shootUp;
+    -moz-animation-duration: 1s;
+}
+
+.shootDown {
+	animation-name: shootDown;
+    animation-duration: 0.5s;
+
+    -webkit-animation-name: shootDown;
+    -webkit-animation-duration: 0.5s;
+
+    -moz-animation-name: shootDown;
+    -moz-animation-duration: 0.5s;
+}
+
+.flicker {
+	-webkit-animation-name: glow1;
+	-webkit-animation-duration: 4s;
+
+    -moz-animation-name: glow1;
+    -moz-animation-duration: 4s;
+}
+
+@-webkit-keyframes glow1 {
+ from { opacity: 1; }
+  20% { opacity: 0.6; }
+  25% { opacity: 1; }
+  30% { opacity: 0.6; }
+  35% { opacity: 1; }
+  50% { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes glow1 {
+ from { opacity: 1; }
+  20% { opacity: 0.6; }
+  25% { opacity: 1; }
+  30% { opacity: 0.6; }
+  35% { opacity: 1; }
+  50% { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+@keyframes shootDown {
+    from {transform:translate(0, -100vh);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes shootDown {
+    from {-webkit-transform:translate(0, -100vh);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes shootDown {
+    from {-moz-transform:translate(0, -100vh);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+@keyframes shootUp {
+    from {transform:translate(0, 100vh);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes shootUp {
+    from {-webkit-transform:translate(0, 100vh);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes shootUp {
+    from {-moz-transform:translate(0, 100vh);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+.float1 {
+    animation-name: float1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: float1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: float1;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+.float2 {
+    animation-name: float2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: float2;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: float2;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+.float3 {
+    animation-name: float3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: float3;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: float3;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+.float4 {
+    animation-name: float4;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: float4;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: float4;
+    -moz-animation-duration: 2s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes float1{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, -3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float1{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, -3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float1{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, -3px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+@keyframes float2{
+    from {transform:translate(0, 0px);}
+    45% {transform:translate(0, 3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float2{
+    from {-webkit-transform:translate(0, 0px);}
+    45% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float2{
+    from {-moz-transform:translate(0, 0px);}
+    45% {-moz-transform:translate(0, 3px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+@keyframes float3{
+    from {transform:translate(0, 0px);}
+    60% {transform:translate(0, 3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float3{
+    from {-webkit-transform:translate(0, 0px);}
+    60% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float3{
+    from {-moz-transform:translate(0, 0px);}
+    60% {-moz-transform:translate(0, 3px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+@keyframes float4{
+    from {transform:translate(0, 0px);}
+    55% {transform:translate(0, 3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float4{
+    from {-webkit-transform:translate(0, 0px);}
+    55% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float4{
+    from {-moz-transform:translate(0, 0px);}
+    55% {-moz-transform:translate(0, 3px);}
+    to {-moz-transform: translate(0, 0px);}
+}

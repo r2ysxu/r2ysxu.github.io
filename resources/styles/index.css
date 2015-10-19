@@ -362,58 +362,6 @@
 	font-size: 10pt;
 }
 
-.float1 {
-	-webkit-animation-name: float1;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-}
-
-.float2 {
-	-webkit-animation-name: float2;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-}
-
-.float3 {
-	-webkit-animation-name: float3;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-}
-
-.float4 {
-	-webkit-animation-name: float4;
-	-webkit-animation-duration: 2s;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes float1{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, -3px);}
-    to {-webkit-transform: translate(0, 0px);}
-}
-
-@-webkit-keyframes float2{
-    from {-webkit-transform:translate(0, 0px);}
-    45% {-webkit-transform:translate(0, 3px);}
-    to {-webkit-transform: translate(0, 0px);}
-}
-
-@-webkit-keyframes float3{
-    from {-webkit-transform:translate(0, 0px);}
-    60% {-webkit-transform:translate(0, 3px);}
-    to {-webkit-transform: translate(0, 0px);}
-}
-
-@-webkit-keyframes float4{
-    from {-webkit-transform:translate(0, 0px);}
-    55% {-webkit-transform:translate(0, 3px);}
-    to {-webkit-transform: translate(0, 0px);}
-}
-
 .textInfo {
 	width: 50em;
 	margin: 0 auto;
@@ -470,39 +418,4 @@ footer {
     position: relative;
     text-align: center;
     color: #333;
-}
-
-.shootUp {
-	animation-name: shootUp;
-    animation-duration: 1s;
-}
-
-.shootDown {
-	animation-name: shootDown;
-    animation-duration: 0.5s;
-}
-
-.flicker {
-	-webkit-animation-name: glow1;
-	-webkit-animation-duration: 4s;
-}
-
-@-webkit-keyframes glow1 {
- from { opacity: 1; }
-  20% { opacity: 0.6; }
-  25% { opacity: 1; }
-  30% { opacity: 0.6; }
-  35% { opacity: 1; }
-  50% { opacity: 0.6; }
-  to { opacity: 1; }
-}
-
-@-webkit-keyframes shootDown {
-    from {-webkit-transform:translate(0, -100vh);}
-    to {-webkit-transform: translate(0, 0px);}
-}
-
-@-webkit-keyframes shootUp {
-    from {-webkit-transform:translate(0, 100vh);}
-    to {-webkit-transform: translate(0, 0px);}
 }
