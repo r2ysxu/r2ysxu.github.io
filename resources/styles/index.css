@@ -7,6 +7,13 @@
 	user-select: none;
 }
 
+.preload {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
 .topBG {
 	position: fixed;
 	top: 0;

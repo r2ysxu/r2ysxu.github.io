@@ -1,5 +1,6 @@
 function loadRepeatingDivs() {
 	clock();
+	document.body.className = '';
 }
 
 function startDragWindow(elemid, event) {
