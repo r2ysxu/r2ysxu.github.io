@@ -77,7 +77,7 @@
 		    			<img src="resources/images/window2k/ieLogo.png" class="menuBarLogo" draggable="false" />
 	    				<div class="windowTitle" unselectable="on">Front-End</div>
 	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('browserDiv')" />
+	    					<input type="button" value="_" onclick="minimizeWindow('browser')" />
 	    					<input type="button" value="X" disabled />
 	    				</div>
 	    			</div>
@@ -107,7 +107,7 @@
 	    				<img src="resources/images/window2k/cmdIcon.png" class="menuBarLogo" draggable="false" />
 	    				<div class="windowTitle noSelect" unselectable="on">Languages</div>
 	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('notepadDiv')" />
+	    					<input type="button" value="_" onclick="minimizeWindow('notepad')" />
 	    					<input type="button" value="X" disabled />
 	    				</div>
 	    			</div>
@@ -143,8 +143,8 @@
 	    				<img id="skillWindovaflowIcon" src="resources/images/ovaflow-logo.png" class="menuBarLogo" draggable="false" />
 	    				<div class="windowTitle noSelect" unselectable="on">Ovaflow</div>
 	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('ovaflowDiv')" />
-	    					<input type="button" value="X" disabled />
+	    					<input type="button" value="_" onclick="minimizeWindow('ovaflow')" />
+	    					<input type="button" value="X" onclick="closeProjectNote('ovaflow')" />
 	    				</div>
 	    			</div>
 	    			<div id="ovaflowDescription" class="windowProjectDesc">
@@ -173,8 +173,8 @@
 	    				<img id="skillWindchitchatIcon" src="resources/images/chitchat-logo.png" class="menuBarLogo" draggable="false" />
 	    				<div class="windowTitle noSelect" unselectable="on">Chitchat</div>
 	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('chitchatDiv')" />
-	    					<input type="button" value="X" disabled />
+	    					<input type="button" value="_" onclick="minimizeWindow('chitchat')" />
+	    					<input type="button" value="X" onclick="closeProjectNote('chitchat')" />
 	    				</div>
 	    			</div>
 	    			<div id="chitchatDescription" class="windowProjectDesc">
@@ -204,7 +204,7 @@
 	    				<img src="resources/images/pictoview-logo.png" class="menuBarLogo" draggable="false" />
 	    				<div class="windowTitle noSelect" unselectable="on">Pictoview</div>
 	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('pictoviewDiv')" />
+	    					<input type="button" value="_" onclick="minimizeWindow('pictoview')" />
 	    					<input type="button" value="X" onclick="closeProjectNote('pictoview')" />
 	    				</div>
 	    			</div>
@@ -367,7 +367,7 @@
 	    			</tr>
 	    		</table>
 	    	</div>
-	    	<div id="educationText" class="bgSpan bgColor2">
+	    	<div id="educationText" style="margin-top: 2em; margin-bottom:2em;" class="bgSpan bgColor2">
 	    		<h2>Education</h2>
 		    	<div class="textInfo">
 	    			<h3>University of Waterloo</h3>

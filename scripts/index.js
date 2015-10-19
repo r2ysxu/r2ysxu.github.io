@@ -54,13 +54,15 @@ function stopDragWindow(elemid) {
 }
 
 function minimizeWindow(elemid) {
-	var elem = document.getElementById(elemid);
+	var elem = document.getElementById(elemid+'Div');
 	elem.style.display = 'none';
 
-	if (elemid == 'browserDiv') {
+	if (elemid == 'browser') {
 		document.getElementById('skillFrontendTask').checked = false;
-	} else if (elemid == 'notepadDiv') {
+	} else if (elemid == 'notepad') {
 		document.getElementById('skillLanguageTask').checked = false;
+	} else {
+		document.getElementById('skill'+elemid+'Task').checked = false;
 	}
 }
 
@@ -115,7 +117,7 @@ function openProjectNote(noteid) {
 		}
 
 		var projTaskLabel = document.createElement('label');
-		projTaskInput.id = 'skill'+noteid+'TaskLb';
+		projTaskLabel.id = 'skill'+noteid+'TaskLb';
 		projTaskLabel.htmlFor  = 'skill'+noteid+'Task';
 
 		var imgLabel = document.createElement('img');
@@ -135,6 +137,8 @@ function openProjectNote(noteid) {
 
 		taskBar.appendChild(projTaskInput);
 		taskBar.appendChild(projTaskLabel);
+	} else {
+		document.getElementById('skill'+noteid+'Task').checked = true;
 	}
 }
 
@@ -142,8 +146,8 @@ function closeProjectNote(noteid) {
 	document.getElementById(noteid+'Div').style.display = 'none';
 	var taskBar = document.getElementById('skillsTaskbar');
 
-	taskBar.removeChild();
-	taskBar.removeChild();
+	document.getElementById('skill'+noteid+'Task').remove();
+	document.getElementById('skill'+noteid+'TaskLb').remove();
 }
 
 function openProjectDesc(buttonElem, noteid) {

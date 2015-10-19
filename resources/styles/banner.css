@@ -17,12 +17,12 @@
 }
 
 @keyframes showbanner {
-    from {top: -200px; opacity: 0.2}
+    from {top: -11.5em; opacity: 0.2}
     to {top: -1px; opacity: 1}
 }
 
 @-webkit-keyframes showbanner {
-    from {top: -200px; opacity: 0.2}
+    from {top: -11.5em; opacity: 0.2}
     to {top: -1px; opacity: 1}
 }
 
@@ -44,7 +44,7 @@
 
 .scrolldown {
     position : fixed;
-    top : -200px;
+    top : -11.5em;
     opacity : 0.3;
 }
 
