@@ -127,9 +127,9 @@ function openProjectNote(noteid) {
 
 		var textLabel = document.createElement('span');
 
-		if (noteid == 'pictoview') textLabel.innerText = 'Pictoview';
-		else if (noteid == 'chitchat') textLabel.innerText = 'Chitchat';
-		else if (noteid == 'ovaflow') textLabel.innerText = 'Ovaflow';
+		if (noteid == 'pictoview') textLabel.textContent = 'Pictoview';
+		else if (noteid == 'chitchat') textLabel.textContent = 'Chitchat';
+		else if (noteid == 'ovaflow') textLabel.textContent = 'Ovaflow';
 
 		projTaskLabel.appendChild(imgLabel);
 		projTaskLabel.appendChild(textLabel);
