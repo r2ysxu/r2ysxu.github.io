@@ -91,6 +91,7 @@ function showStartTab(noteid) {
 function hideStartSubTabs() {
 	document.getElementById('skillsProgramsTab').style.display = 'none';
 	document.getElementById('skillsProjectsTab').style.display = 'none';
+	document.getElementById('skillsServersTab').style.display = 'none';
 }
 
 function hideStartTabs() {
