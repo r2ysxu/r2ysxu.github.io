@@ -7,9 +7,19 @@
 	user-select: none;
 }
 
+.topBG {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 90vh;
+	background-image: url("../images/woodenBoard.jpg");
+	margin-left: -1em;
+	margin-top: -1em;
+	z-index: -1;
+}
+
 .mainContentDiv {
 	width: 99%;
-	background-color: white;
 }
 
 .computerContent {
@@ -313,7 +323,7 @@
 	margin: 1em auto;
 	border-radius: 15px;
 	padding: 1em;
-    background-color: rgba(0, 51, 204, 0.3);
+    background-color: rgba(126, 151, 230, 1);
 
 }
 
@@ -383,7 +393,7 @@
 	margin: 0 auto;
 	border-radius: 15px;
 	padding: 1em;
-    background-color: rgba(255, 217, 55, 0.3);
+    background-color: rgba(255, 237, 153, 1);
 }
 
 .textTable {
@@ -391,11 +401,14 @@
 	margin: 0 auto;
 	border-radius: 15px;
 	padding: 1em;
+	border-spacing: 1em;
 }
 
 .textTable td {
 	margin-top: 0;
-	padding-top: 0;
+	padding: 1em;
+	background-color: rgba(244, 245, 239, 1);
+	border-radius: 15px;
 }
 
 .textTable ul {
@@ -415,7 +428,7 @@
 }
 
 .bgColor1 {
-	background-color: #F4F5EF;
+	background-color: rgba(244, 245, 239, 0.3);
 }
 
 .bgColor2 {
