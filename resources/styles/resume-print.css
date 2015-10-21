@@ -22,6 +22,7 @@ h2 {
     padding-right: 5px;
     padding-bottom: 1px;
     margin-bottom: 5px;
+    margin-top: 0;
     border-bottom: 2px ridge;
 }
 
@@ -118,4 +119,26 @@ a:link {color:#2554C7;text-decoration:none;}
 .c6 {
     font-size: 8pt;
     z-index: 1;
+}
+
+.qTable {
+    margin: 0 auto;
+}
+
+.qTable td {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.qTable ul {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.qTable h4 {
+    margin-top: 0.2em;
+    margin-bottom: 0;
 }
