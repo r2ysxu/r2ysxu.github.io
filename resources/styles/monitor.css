@@ -37,7 +37,7 @@
 .monitor {
 	position: relative;
 	padding: 1em;
-	height: 50em;
+	height: 65em;
 }
 
 .computerScreen {
@@ -326,7 +326,7 @@
 }
 
 .projectLogo {
-    height: 10em;
+    width: 10em;
     float: right;
 }
 
@@ -342,13 +342,6 @@
 
 .projectList {
     text-align: center;
-}
-
-.selectedProject {
-	text-align: center;
-    display: inline-block;
-	border-radius: 15px;
-    background-color: rgba(126, 151, 230, 1);
 }
 
 .projectDesc {
@@ -367,14 +360,6 @@
 .floatingWords {
 	position: absolute;
 	font-size: 10pt;
-}
-
-.textInfo {
-	width: 50em;
-	margin: 0 auto;
-	border-radius: 15px;
-	padding: 1em;
-    background-color: rgba(255, 237, 153, 1);
 }
 
 .textTable {
@@ -399,30 +384,4 @@
 
 .textTable h4 {
 	margin-bottom: 0;
-}
-
-.bgSpan {
-	margin-left: -1em;
-	padding: 1em;
-    width: 100vw;
-	border-bottom: solid 1px #797977;
-}
-
-.bgColor1 {
-	background-color: rgba(244, 245, 239, 0.5);
-}
-
-.bgColor2 {
-	background-color: rgba(255, 217, 55, 0.5);
-}
-
-.bgColor3 {
-	background-color: rgba(0, 51, 204, 0.5);
-}
-
-footer {
-    clear: both;
-    position: relative;
-    text-align: center;
-    color: #333;
 }

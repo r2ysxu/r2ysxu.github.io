@@ -1,0 +1,168 @@
+
+/* Float1 */
+.float1 {
+	animation-name: float1;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: float1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: float1;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes float1{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, -3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float1{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, -3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float1{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, -3px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+/* Float2 */
+.float2 {
+	animation-name: float2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: float2;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: float2;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes float2{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 3px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float2{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 3px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float2{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 3px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+.float3 {
+    animation-name: float3;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: float3;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: float3;
+    -moz-animation-duration: 5s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+}
+
+.float3:hover {
+    animation: 0;
+    -webkit-animation: 0;
+    -moz-animation: 0;
+    opacity: 1;
+}
+
+@keyframes float3{
+    from {transform:translate(0, 0px);}
+    65% {transform:translate(0, 7px);}
+    to {transform: translate(0, 0px);}
+}
+
+@-webkit-keyframes float3{
+    from {-webkit-transform:translate(0, 0px);}
+    55% {-webkit-transform:translate(0, 7px);}
+    65% {-webkit-transform:translate(0, 7px);}
+    to {-webkit-transform: translate(0, 0px);}
+}
+
+@-moz-keyframes float3{
+    from {-moz-transform:translate(0, 0px);}
+    55% {-moz-transform:translate(0, 7px);}
+    65% {-moz-transform:translate(0, 7px);}
+    to {-moz-transform: translate(0, 0px);}
+}
+
+/* Drift1 */
+.drift1 {
+    animation-name: drift1;
+    animation-duration: 500s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: drift1;
+    -webkit-animation-duration: 500s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: drift1;
+    -moz-animation-duration: 500s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+}
+
+.drift2 {
+    animation-name: drift1;
+    animation-duration: 450s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: drift1;
+    -webkit-animation-duration: 450s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: drift1;
+    -moz-animation-duration: 450s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+}
+
+@keyframes drift1{
+    from {  transform:translate(0px, 0px);
+            opacity: 1; }
+    40%  {  transform:translate(-50vw, 0px);
+            opacity: 1; }
+    41%  {  transform:translate(-50vw, 0px);
+            opacity: 0; }
+    42%  {  transform:translate(100vw, 0px);
+            opacity: 0; }
+    43%  {  transform:translate(100vw, 0px);
+            opacity: 1; }
+    100% {  transform:translate(0px, 0px);
+            opacity: 1; }
+}
+
+@-webkit-keyframes drift1{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(-50vw, 0px);  display: none;}
+    66% {-webkit-transform:translate(50vw, 0px); display: none; }
+}
+
+@-moz-keyframes drift1{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(-50vw, 0px);}
+    66% {-moz-transform:translate(-50vw, 0px); display: none; }
+}
