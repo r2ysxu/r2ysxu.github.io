@@ -12,14 +12,13 @@ $( document ).ready(function() {
 
 	    var onresize = function () {
 	        var windowWidth = window.innerWidth,
-	        windowHeight = window.innerHeight;
+	        windowHeight = FIXED_CANVAS_HEIGHT;
 
 	        if (windowWidth / windowHeight > MIN_ASPECT) {
 	            makePerspectiveMatrix(projectionMatrix, FOV, windowWidth / windowHeight, NEAR, FAR);
 	            simulator.resize(windowWidth, windowHeight);
 	            cameraEl.style.width = windowWidth + 'px';
 	            cameraEl.style.height = windowHeight + 'px';
-	            canvasEl.style.top = '0px';
 	            width = windowWidth;
 	            height = windowHeight;
 	        } else {

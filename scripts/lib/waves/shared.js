@@ -1,4 +1,4 @@
-var INITIAL_SIZE = 1000,
+var INITIAL_SIZE = 250,
     INITIAL_WIND = [5.0, 5.0],
     INITIAL_CHOPPINESS = 1;
 
@@ -8,9 +8,12 @@ var CLEAR_COLOR = [1.0, 1.0, 1.0, 0.0],
     OCEAN_COLOR = [0.004, 0.016, 0.047],
     SKY_COLOR = [3.2, 9.6, 12.8],
     EXPOSURE = 0.4,
-    GEOMETRY_RESOLUTION = 1024,
-    GEOMETRY_SIZE = 10000,
+    GEOMETRY_RESOLUTION = 256,
+    GEOMETRY_SIZE = 2000,
+    GEOMETRY_WIDTH_MULT = 5;
     RESOLUTION = 512;
+
+var FIXED_CANVAS_HEIGHT = 400;
 
 var SIZE_OF_FLOAT = 4;
 
@@ -31,9 +34,9 @@ var FOV = (60 / 180) * Math.PI,
     MIN_ASPECT = 16 / 9;
 
 var CAMERA_DISTANCE = 1500,
-    ORBIT_POINT = [0, -100, 0],
-    INITIAL_AZIMUTH = 3.15,
-    INITIAL_ELEVATION = 0.4;
+    ORBIT_POINT = [0, -700, 0],
+    INITIAL_AZIMUTH = 0,
+    INITIAL_ELEVATION = 0.6;
 
 var addToVector = function (out, a, b) {
     out[0] = a[0] + b[0];

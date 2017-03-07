@@ -435,7 +435,7 @@ var Simulator = function (canvas, width, height) {
     var oceanData = [];
     for (var zIndex = 0; zIndex < GEOMETRY_RESOLUTION; zIndex += 1) {
         for (var xIndex = 0; xIndex < GEOMETRY_RESOLUTION; xIndex += 1) {
-            oceanData.push((xIndex * GEOMETRY_SIZE) / (GEOMETRY_RESOLUTION - 1) + GEOMETRY_ORIGIN[0]);
+            oceanData.push((xIndex * GEOMETRY_SIZE * GEOMETRY_WIDTH_MULT) / (GEOMETRY_RESOLUTION - 1) + GEOMETRY_ORIGIN[0]);
             oceanData.push((0.0));
             oceanData.push((zIndex * GEOMETRY_SIZE) / (GEOMETRY_RESOLUTION - 1) + GEOMETRY_ORIGIN[1]);
             oceanData.push(xIndex / (GEOMETRY_RESOLUTION - 1));
