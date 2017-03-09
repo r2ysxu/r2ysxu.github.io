@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-	var main = function () {
+	var wavesMain = function () {
 	    var camera = new Camera(),
 	        projectionMatrix = makePerspectiveMatrix(new Float32Array(16), FOV, MIN_ASPECT, NEAR, FAR);
 
@@ -49,7 +49,11 @@ $( document ).ready(function() {
     	render();
 	}
 
+	var aquaMain = function() {
+
+	}
+
 	if (hasWebGLSupportWithExtensions(['OES_texture_float', 'OES_texture_float_linear'])) {
-	    main();
+	    wavesMain();
 	}
 });
