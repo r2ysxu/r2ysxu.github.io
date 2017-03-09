@@ -75,6 +75,7 @@ var FishTank = function(canvas) {
 
         // Init
         initShaders();
+        initAllTexture();
 
 		Aqua.perspectiveMatrix = makePerspectiveMatrix(new Float32Array(16), FOV, width / height, NEAR, FAR);
 	}
@@ -110,8 +111,32 @@ var Fish = function(canvas) {
 	}
 
 	self.render = function() {
+		// Set matrix
+
+		// Binding matrix to buffer
+		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesBuffer);
+		gl.vertexAttribPointer(Aqua.vertexPositionAttribute, 3, gl.FLOAT, false, 0,
+				0);
+
+		// Bind Texture to Buffer
+		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesTextureCoordBuffer);
+		gl.vertexAttribPointer(Aqua.textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+
+		// Bind Textures
+		gl.activeTexture(gl.TEXTURE0);
+		gl.bindTexture(gl.TEXTURE_2D, this.correctTexture());
+		gl.uniform1i(gl.getUniformLocation(Aqua.shaderProgram, "uSampler"), 0);
+
+		gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.verticesIndexBuffer);
+
+		// Draw Object
+		gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
 	}
+
+	self.correctTexture = function correctTexture() {
+		return textures[0];
+	};
 }
 
 
@@ -143,6 +168,11 @@ Aqua = {
 		'	gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));',
 		'}',
 	]
+}
+
+var textures = Array();
+function initAllTexture() {
+	//textures[0] = initTexture("resources/images/window2k/cmdIcon.png");
 }
 
 // Helper functions
