@@ -77,7 +77,7 @@ var FishTank = function(canvas) {
         initShaders();
         initAllTexture();
 
-		Aqua.perspectiveMatrix = makePerspectiveMatrix(new Float32Array(16), FOV, width / height, NEAR, FAR);
+		Aqua.perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 	}
 }
 
@@ -112,6 +112,11 @@ var Fish = function(canvas) {
 
 	self.render = function() {
 		// Set matrix
+		MvMatrix.loadIdentity();
+		MvMatrix.mvTranslate([ -0.0, 0.0, -6.0 ]);
+
+		// Save Matrix Location
+		MvMatrix.mvPushMatrix();
 
 		// Binding matrix to buffer
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesBuffer);
@@ -130,8 +135,11 @@ var Fish = function(canvas) {
 		gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.verticesIndexBuffer);
 
 		// Draw Object
+		setMatrixUniforms();
 		gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
+		// Restore the original matrix
+		MvMatrix.mvPopMatrix();
 	}
 
 	self.correctTexture = function correctTexture() {
@@ -172,7 +180,7 @@ Aqua = {
 
 var textures = Array();
 function initAllTexture() {
-	//textures[0] = initTexture("resources/images/window2k/cmdIcon.png");
+	textures[0] = initTexture("resources/images/pink_salmon512.png");
 }
 
 // Helper functions
@@ -189,9 +197,18 @@ function handleTextureLoaded(image, texture) {
 function initTexture(imagePath) {
 	var texture = gl.createTexture();
 	var image = new Image();
+	image.src = imagePath;
 	image.onload = function() {
 		handleTextureLoaded(image, texture);
 	};
-	image.src = imagePath;
 	return texture;
+}
+
+function setMatrixUniforms() {
+	var pUniform = gl.getUniformLocation(Aqua.shaderProgram, "uPMatrix");
+	gl.uniformMatrix4fv(pUniform, false, new Float32Array(Aqua.perspectiveMatrix
+			.flatten()));
+
+	var mvUniform = gl.getUniformLocation(Aqua.shaderProgram, "uMVMatrix");
+	gl.uniformMatrix4fv(mvUniform, false, new Float32Array(MvMatrix.mvMatrix.flatten()));
 }
