@@ -34,7 +34,7 @@ var FOV = (60 / 180) * Math.PI,
     MIN_ASPECT = 16 / 9;
 
 var CAMERA_DISTANCE = 1500,
-    ORBIT_POINT = [0, -900, 0],
+    ORBIT_POINT = [0, -700, 0],
     INITIAL_AZIMUTH = 0,
     INITIAL_ELEVATION = 0.6;
 

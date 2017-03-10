@@ -13,10 +13,11 @@ $( document ).ready(function() {
 
 	    var lastTime = (new Date()).getTime();
     	var render = function render(currentTime) {
-	        var deltaTime = (currentTime - lastTime) / 1000 || 0.0;
-	        lastTime = currentTime;
 
 	        fishes.render();
+	        if (currentTime > 500) {
+	        	fishes.moveLeft(0.01);
+			}
 
 	        requestAnimationFrame(render);
     	};
@@ -89,6 +90,8 @@ var Fish = function(canvas) {
 	this.verticesTextureCoordBuffer;
 	this.verticesIndexBuffer;
 
+	this.xPos = 0.0, this.yPos = 0.0;
+
 	self.initFishBuffer = function() {
 		this.verticesBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesBuffer);
@@ -113,10 +116,13 @@ var Fish = function(canvas) {
 	self.render = function() {
 		// Set matrix
 		MvMatrix.loadIdentity();
-		MvMatrix.mvTranslate([ -0.0, 0.0, -6.0 ]);
+		MvMatrix.mvTranslate([ 0.0, 0.0, -5.0 ]);
 
 		// Save Matrix Location
 		MvMatrix.mvPushMatrix();
+
+		// Translate
+		MvMatrix.mvTranslate([ this.xPos, this.yPos, 0.0 ]);
 
 		// Binding matrix to buffer
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesBuffer);
@@ -140,6 +146,10 @@ var Fish = function(canvas) {
 
 		// Restore the original matrix
 		MvMatrix.mvPopMatrix();
+	}
+
+	self.moveLeft = function(delta) {
+		self.xPos += delta;
 	}
 
 	self.correctTexture = function correctTexture() {

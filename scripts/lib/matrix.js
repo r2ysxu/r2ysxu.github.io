@@ -39,6 +39,5 @@ var MvMatrix = {
     
     var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
     MvMatrix.multMatrix(m);
-  },
-
+  }
 }
