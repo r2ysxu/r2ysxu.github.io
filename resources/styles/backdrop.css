@@ -96,6 +96,7 @@
 }
 
 #waves-camera {
+  display: none;
   position: absolute;
   overflow: none;
   -webkit-transform-style: preserve-3d;
@@ -143,7 +144,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  height: 250%;
+  height: 270%;
   width: 100%;
   background: radial-gradient(circle at center -100%, rgb(10, 31, 51), rgb(3, 11, 21) 70%);
 }
@@ -352,7 +353,7 @@ footer {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 350%;
+  top: 370%;
   clear: both;
   text-align: center;
   color: #333;

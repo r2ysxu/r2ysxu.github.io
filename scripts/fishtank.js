@@ -1,9 +1,26 @@
 var gl;
+var tankRatio;
 
 $( document ).ready(function() {
+
+	var createRandomFish = function(fish, canvasEl, isLeft) {
+		var randomSize = (Math.random() * 3.0) + 0.1;
+    	fish = new Fish(canvasEl, randomSize, isLeft);
+    	fish.initFishBuffer();
+
+    	var randomY = Math.random() * 8.0 - 3.8;
+    	var randomX = -(Math.random() * 4.0) - 3.0;
+		var randomSpeed = Math.random() * 0.0500 + 0.005;
+
+    	fish.setInitalPosition(randomX, randomY);
+    	fish.setSpeed(randomSpeed);
+    	return fish;
+	}
+
 	var aquaMain = function() {
 	    var canvasEl = $('#tank-canvas')[0];
-
+	    canvasEl.width = document.body.clientWidth;
+	    tankRatio = canvasEl.width / canvasEl.height;
 
 	    var tank = new FishTank(canvasEl);
 	    tank.init();
@@ -12,45 +29,27 @@ $( document ).ready(function() {
 	    var fishesR = new Array(Aqua.numFishRight);
 
 	    for (var l = 0; l < Aqua.numFishLeft; l++) {
-	    	fishesL[l] = new Fish(canvasEl, true);
-	    	fishesL[l].initFishBuffer();
-
-	    	var randomY = Math.random() * 8.0 - 3.8;
-	    	var randomX = -(Math.random() * 4.0) - 3.0;
-			var randomSpeed = Math.random() * 0.0500 + 0.001;
-
-	    	fishesL[l].setInitalPosition(randomX, randomY);
-	    	fishesL[l].setSpeed(randomSpeed);
+	    	fishesL[l] = createRandomFish(fishesL[l], canvasEl, true);
 	    }
 
 	   	for (var r = 0; r < Aqua.numFishRight; r++) {
-	    	fishesR[r] = new Fish(canvasEl, false);
-	    	fishesR[r].initFishBuffer();
-
-	    	var randomY = Math.random() * 8.0 - 3.8;
-	    	var randomX = (Math.random() * 4.0) + 3.0;
-			var randomSpeed = Math.random() * 0.0500 + 0.001;
-	    	fishesR[r].setInitalPosition(randomX, randomY);
-	    	fishesR[r].setSpeed(randomSpeed);
+	    	fishesR[r] = createRandomFish(fishesR[r], canvasEl, false);
 	    }
 
 
 	    var lastTime = (new Date()).getTime();
     	var render = function render(currentTime) {
-
-    		// Render and animate left fishes
-    		for (var l = 0; l < Aqua.numFishLeft; l++) {
-		        fishesL[l].render();
-		        if (currentTime > 500) {
-		        	fishesL[l].moveLeft(randomSpeed);
+		    if (currentTime > 500) {
+	    		// Render and animate left fishes
+	    		for (var l = 0; l < Aqua.numFishLeft; l++) {
+			        fishesL[l].render();
+			        fishesL[l].moveLeft();
 				}
-			}
 
-			// Render and animate right fishes
-			for (var r = 0; r < Aqua.numFishRight; r++) {
-		        fishesR[r].render();
-		        if (currentTime > 500) {
-		        	fishesR[r].moveRight(randomSpeed);
+				// Render and animate right fishes
+				for (var r = 0; r < Aqua.numFishRight; r++) {
+			        fishesR[r].render();
+			        fishesR[r].moveRight();
 				}
 			}
 
@@ -97,9 +96,6 @@ var FishTank = function(canvas) {
 		console.log(self);
 		gl = self.canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
 
-		var width = window.innerWidth,
-        	height = window.innerHeight;
-
         if (gl) {
         	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 			gl.viewport(0, 0, canvas.width, canvas.height);
@@ -118,7 +114,7 @@ var FishTank = function(canvas) {
 }
 
 
-var Fish = function(canvas, isLeft) {
+var Fish = function(canvas, size, isLeft) {
 	var self = this;
 	this.canvas = canvas;
 	this.verticesBuffer;
@@ -126,14 +122,18 @@ var Fish = function(canvas, isLeft) {
 	this.verticesIndexBuffer;
 	this.isLeft = isLeft;
 	this.speed = 0.01;
+	this.size = size;
 
 	this.xPos = 0.0, this.yPos = 0.0;
 
 	self.initFishBuffer = function() {
+		var s = this.size;
 		this.verticesBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesBuffer);
-		var vertices = [ -0.5, 0.5, 0.0, -0.5, -0.5, 0.0, 0.5, 0.5, 0.0, 0.5,
-				-0.5, 0.0 ];
+		var vertices = [ -s, s * tankRatio, 0.0,
+						 -s, -s* tankRatio, 0.0,
+						  s, s * tankRatio, 0.0,
+						  s,-s * tankRatio, 0.0 ];
 		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices),
 				gl.STATIC_DRAW);
 
