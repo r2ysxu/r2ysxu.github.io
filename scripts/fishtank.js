@@ -8,15 +8,50 @@ $( document ).ready(function() {
 	    var tank = new FishTank(canvasEl);
 	    tank.init();
 
-	    var fishes = new Fish();
-	    fishes.initFishBuffer();
+	    var fishesL = new Array(Aqua.numFishLeft);
+	    var fishesR = new Array(Aqua.numFishRight);
+
+	    for (var l = 0; l < Aqua.numFishLeft; l++) {
+	    	fishesL[l] = new Fish(canvasEl, true);
+	    	fishesL[l].initFishBuffer();
+
+	    	var randomY = Math.random() * 8.0 - 3.8;
+	    	var randomX = -(Math.random() * 4.0) - 3.0;
+			var randomSpeed = Math.random() * 0.0500 + 0.001;
+
+	    	fishesL[l].setInitalPosition(randomX, randomY);
+	    	fishesL[l].setSpeed(randomSpeed);
+	    }
+
+	   	for (var r = 0; r < Aqua.numFishRight; r++) {
+	    	fishesR[r] = new Fish(canvasEl, false);
+	    	fishesR[r].initFishBuffer();
+
+	    	var randomY = Math.random() * 8.0 - 3.8;
+	    	var randomX = (Math.random() * 4.0) + 3.0;
+			var randomSpeed = Math.random() * 0.0500 + 0.001;
+	    	fishesR[r].setInitalPosition(randomX, randomY);
+	    	fishesR[r].setSpeed(randomSpeed);
+	    }
+
 
 	    var lastTime = (new Date()).getTime();
     	var render = function render(currentTime) {
 
-	        fishes.render();
-	        if (currentTime > 500) {
-	        	fishes.moveLeft(0.01);
+    		// Render and animate left fishes
+    		for (var l = 0; l < Aqua.numFishLeft; l++) {
+		        fishesL[l].render();
+		        if (currentTime > 500) {
+		        	fishesL[l].moveLeft(randomSpeed);
+				}
+			}
+
+			// Render and animate right fishes
+			for (var r = 0; r < Aqua.numFishRight; r++) {
+		        fishesR[r].render();
+		        if (currentTime > 500) {
+		        	fishesR[r].moveRight(randomSpeed);
+				}
 			}
 
 	        requestAnimationFrame(render);
@@ -83,12 +118,14 @@ var FishTank = function(canvas) {
 }
 
 
-var Fish = function(canvas) {
+var Fish = function(canvas, isLeft) {
 	var self = this;
 	this.canvas = canvas;
 	this.verticesBuffer;
 	this.verticesTextureCoordBuffer;
 	this.verticesIndexBuffer;
+	this.isLeft = isLeft;
+	this.speed = 0.01;
 
 	this.xPos = 0.0, this.yPos = 0.0;
 
@@ -148,20 +185,43 @@ var Fish = function(canvas) {
 		MvMatrix.mvPopMatrix();
 	}
 
-	self.moveLeft = function(delta) {
-		self.xPos += delta;
+	self.moveLeft = function() {
+		self.xPos += self.speed;
+		if (self.xPos > 5) {
+			self.xPos = -5;
+			self.yPos = Math.random() * 10.0 - 5.0;
+		}
 	}
 
-	self.correctTexture = function correctTexture() {
-		return textures[0];
-	};
+	self.moveRight = function() {
+		self.xPos -= self.speed;
+		if (self.xPos < -5) {
+			self.xPos = 5;
+			self.yPos = Math.random() * 10.0 - 5.0;
+		}
+	}
+
+	self.correctTexture = function () {
+		if (self.isLeft) return textures[0];
+		else return textures[1];
+	}
+
+	self.setInitalPosition = function(xPos, yPos) {
+		self.xPos = xPos;
+		self.yPos = yPos;
+	}
+
+	self.setSpeed = function(delta) {
+		this.speed = delta;
+	}
 }
 
 
 // FishTank variables:
 
 Aqua = {
-	numFish : 5,
+	numFishLeft : 5,
+	numFishRight: 5,
 	perspectiveMatrix : null,
 	shaderProgram : null,
 	vertexPositionAttribute : null,
@@ -188,9 +248,10 @@ Aqua = {
 	]
 }
 
-var textures = Array();
+var textures = Array(2);
 function initAllTexture() {
-	textures[0] = initTexture("resources/images/pink_salmon512.png");
+	textures[1] = initTexture("resources/images/pink_salmon512.png");
+	textures[0] = initTexture("resources/images/pink_salmon512R.png");
 }
 
 // Helper functions
