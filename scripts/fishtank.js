@@ -4,7 +4,7 @@ var tankRatio;
 $( document ).ready(function() {
 
 	var createRandomFish = function(fish, canvasEl, isLeft) {
-		var randomSize = (Math.random() * 3.0) + 0.1;
+		var randomSize = (Math.random() * 1.0) + 0.1;
     	fish = new Fish(canvasEl, randomSize, isLeft);
     	fish.initFishBuffer();
 
@@ -139,7 +139,10 @@ var Fish = function(canvas, size, isLeft) {
 
 		this.verticesTextureCoordBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesTextureCoordBuffer);
-		var textureCoords = [ 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0 ];
+		var textureCoords = [ 0.0, 0.0,
+							  0.0, 1.0,
+							  1.0, 0.0,
+							  1.0, 1.0 ];
 		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoords),
 				gl.STATIC_DRAW);
 
