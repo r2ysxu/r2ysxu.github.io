@@ -8,7 +8,6 @@ $( document ).ready(function() {
 	var createRandomFish = function(fish, canvasEl, isLeft) {
 		var randomSize = (Math.random() * 0.5) + 0.1;
 	    var randomColorType = Math.round((Math.random() * 2)) + 1;
-	    console.log(randomColorType)
     	fish = new Fish(canvasEl, randomSize, isLeft, randomColorType);
     	fish.initFishBuffer();
 
