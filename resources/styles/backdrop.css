@@ -154,6 +154,11 @@
   opacity: 0.6;
 }
 
+#tank-canvas {
+  margin-top: 1em;
+  box-shadow: inset 0px 10px 25px rgba(0, 0, 0, 0.5), inset 0px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
 /* Projects */
 
 #projects {

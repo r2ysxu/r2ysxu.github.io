@@ -1,11 +1,15 @@
 var gl;
 var tankRatio;
+var MAX_FISH_FRAME = 16;
+var FISH_COLOR_TYPES = 3;
 
 $( document ).ready(function() {
 
 	var createRandomFish = function(fish, canvasEl, isLeft) {
-		var randomSize = (Math.random() * 1.0) + 0.1;
-    	fish = new Fish(canvasEl, randomSize, isLeft);
+		var randomSize = (Math.random() * 0.5) + 0.1;
+	    var randomColorType = Math.round((Math.random() * 2)) + 1;
+	    console.log(randomColorType)
+    	fish = new Fish(canvasEl, randomSize, isLeft, randomColorType);
     	fish.initFishBuffer();
 
     	var randomY = Math.random() * 8.0 - 3.8;
@@ -39,23 +43,29 @@ $( document ).ready(function() {
 
 	    var lastTime = (new Date()).getTime();
     	var render = function render(currentTime) {
-		    if (currentTime > 500) {
+    		nowTime = (new Date()).getTime();
+		    if (nowTime - lastTime > 10) {
 	    		// Render and animate left fishes
 	    		for (var l = 0; l < Aqua.numFishLeft; l++) {
 			        fishesL[l].render();
 			        fishesL[l].moveLeft();
+			        fishesL[l].animateFrame(0.05);
 				}
 
 				// Render and animate right fishes
 				for (var r = 0; r < Aqua.numFishRight; r++) {
 			        fishesR[r].render();
 			        fishesR[r].moveRight();
+			        fishesR[r].animateFrame(0.05);
 				}
+				lastTime = nowTime;
 			}
 
 	        requestAnimationFrame(render);
     	};
-    	render();
+    	$(window).load(function(){
+    		render();
+    	});
 	}
 
 	if (hasWebGLSupportWithExtensions(['OES_texture_float', 'OES_texture_float_linear'])) {
@@ -114,7 +124,7 @@ var FishTank = function(canvas) {
 }
 
 
-var Fish = function(canvas, size, isLeft) {
+var Fish = function(canvas, size, isLeft, colorType) {
 	var self = this;
 	this.canvas = canvas;
 	this.verticesBuffer;
@@ -123,6 +133,11 @@ var Fish = function(canvas, size, isLeft) {
 	this.isLeft = isLeft;
 	this.speed = 0.01;
 	this.size = size;
+
+	this.fishColor = colorType;
+	this.frame = 1;
+	this.distance = 0;
+	this.addFrame = false;
 
 	this.xPos = 0.0, this.yPos = 0.0;
 
@@ -139,12 +154,6 @@ var Fish = function(canvas, size, isLeft) {
 
 		this.verticesTextureCoordBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ARRAY_BUFFER, this.verticesTextureCoordBuffer);
-		var textureCoords = [ 0.0, 0.0,
-							  0.0, 1.0,
-							  1.0, 0.0,
-							  1.0, 1.0 ];
-		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoords),
-				gl.STATIC_DRAW);
 
 		this.verticesIndexBuffer = gl.createBuffer();
 		gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.verticesIndexBuffer);
@@ -174,6 +183,13 @@ var Fish = function(canvas, size, isLeft) {
 		gl.vertexAttribPointer(Aqua.textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 
 		// Bind Textures
+		var textureCoords = [ (self.frame - 1) / MAX_FISH_FRAME, (self.fishColor - 1) / FISH_COLOR_TYPES,
+							  (self.frame - 1) / MAX_FISH_FRAME,  self.fishColor / FISH_COLOR_TYPES,
+							   self.frame      / MAX_FISH_FRAME, (self.fishColor - 1) / FISH_COLOR_TYPES,
+							   self.frame      / MAX_FISH_FRAME,  self.fishColor / FISH_COLOR_TYPES ];
+		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoords),
+				gl.STATIC_DRAW);
+
 		gl.activeTexture(gl.TEXTURE0);
 		gl.bindTexture(gl.TEXTURE_2D, this.correctTexture());
 		gl.uniform1i(gl.getUniformLocation(Aqua.shaderProgram, "uSampler"), 0);
@@ -190,14 +206,32 @@ var Fish = function(canvas, size, isLeft) {
 
 	self.moveLeft = function() {
 		self.xPos += self.speed;
+		self.distance += self.speed;
 		if (self.xPos > 5) {
 			self.xPos = -5;
 			self.yPos = Math.random() * 10.0 - 5.0;
 		}
 	}
 
+	self.animateFrame = function(distance) {
+		if (self.distance > distance) {
+			if (self.frame >= MAX_FISH_FRAME)
+				self.addFrame = false;
+			else if (self.frame <= 1)
+				self.addFrame = true;
+
+			if (self.addFrame) {
+				self.frame++;
+			} else {
+				self.frame--;
+			}
+			self.distance = 0;
+		}
+	}
+
 	self.moveRight = function() {
 		self.xPos -= self.speed;
+		self.distance += self.speed;
 		if (self.xPos < -5) {
 			self.xPos = 5;
 			self.yPos = Math.random() * 10.0 - 5.0;
@@ -253,8 +287,8 @@ Aqua = {
 
 var textures = Array(2);
 function initAllTexture() {
-	textures[1] = initTexture("resources/images/pink_salmon512.png");
-	textures[0] = initTexture("resources/images/pink_salmon512R.png");
+	textures[1] = initTexture("resources/images/fishstripR.png");
+	textures[0] = initTexture("resources/images/fishstrip.png");
 }
 
 // Helper functions
