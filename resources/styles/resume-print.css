@@ -3,7 +3,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     font-family: Verdana, Arial;
-    font-size: 12px;
+    font-size: 12pt;
 }
 
 ul {
@@ -11,6 +11,7 @@ ul {
     padding-top: 2px;
     margin-bottom: 7px;
     padding-bottom: 2px;
+    width: 70%;
 }
 
 ul li {
@@ -75,6 +76,10 @@ a:link {color:#2554C7;text-decoration:none;}
 
 /* Qualification Web Related  */
 
+#education strong {
+    font-size: 14pt;
+}
+
 .webContainer {
     position: relative;
     width: 100%;
@@ -92,32 +97,32 @@ a:link {color:#2554C7;text-decoration:none;}
 }
 
 .c1 {
-    font-size: 18pt;
+    font-size: 20pt;
     z-index: 6;
 }
 
 .c2 {
-    font-size: 16pt;
+    font-size: 18pt;
     z-index: 5;
 }
 
 .c3 {
-    font-size: 14pt;
+    font-size: 16pt;
     z-index: 4;
 }
 
 .c4 {
-    font-size: 12pt;
+    font-size: 14pt;
     z-index: 3;
 }
 
 .c5 {
-    font-size: 10pt;
+    font-size: 12pt;
     z-index: 2;
 }
 
 .c6 {
-    font-size: 8pt;
+    font-size: 10pt;
     z-index: 1;
 }
 
@@ -141,4 +146,24 @@ a:link {color:#2554C7;text-decoration:none;}
 .qTable h4 {
     margin-top: 0.2em;
     margin-bottom: 0;
+}
+
+.experience-type {
+    margin-left: 2em;
+}
+
+.experience-type-title {
+    margin-left: -2em;
+}
+
+.experience-type p {
+    margin-top: 0;
+}
+
+.experience-type span {
+    font-size: 14pt;
+}
+
+.experience-type label {
+    visibility: hidden;
 }
