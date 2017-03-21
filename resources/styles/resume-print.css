@@ -37,7 +37,7 @@ td {
 a:link {color:#2554C7;text-decoration:none;}
 
 .title-text {
-    font-size: 18pt;
+    font-size: 32pt;
 }
 
 .date-right {
@@ -57,13 +57,17 @@ a:link {color:#2554C7;text-decoration:none;}
     padding-bottom: 5px;
 }
 
+#header {
+    margin-bottom: 15px;
+}
+
 #personal-info {
     text-align: center;
     width: 100%;
 }
 
 #personal-info td {
-    width: 33%;
+    width: 25%;
 }
 
 #technologies {
@@ -93,7 +97,6 @@ a:link {color:#2554C7;text-decoration:none;}
     background: white;
     padding-left: 0.3em;
     padding-right: 0.3em;
-    border-radius: 0.5em;
 }
 
 .c1 {
