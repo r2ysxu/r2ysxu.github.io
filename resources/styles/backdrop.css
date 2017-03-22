@@ -142,9 +142,9 @@
 /* Underwater */
 #underwater {
   position: absolute;
-  top: 100%;
+  top: calc(80% + 200px);
+  height: calc(100% + 80em + 600px);
   left: 0;
-  height: 270%;
   width: 100%;
   background: radial-gradient(circle at center -100%, rgb(10, 31, 51), rgb(3, 11, 21) 70%);
 }
@@ -358,7 +358,7 @@ footer {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 370%;
+  top: calc(200% + 80em + 600px);
   clear: both;
   text-align: center;
   color: #333;
