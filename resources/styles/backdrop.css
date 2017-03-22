@@ -142,7 +142,7 @@
 /* Underwater */
 #underwater {
   position: absolute;
-  top: calc(80% + 200px);
+  top: calc(80% + 150px);
   height: calc(100% + 80em + 600px);
   left: 0;
   width: 100%;
