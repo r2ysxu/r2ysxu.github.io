@@ -173,3 +173,7 @@ a:link {color:#2554C7;text-decoration:none;}
 .experience-type label {
     visibility: hidden;
 }
+
+.noshow {
+    visibility: hidden;
+}
