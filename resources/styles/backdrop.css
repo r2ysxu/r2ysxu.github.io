@@ -358,7 +358,7 @@ footer {
   position: absolute;
   width: 100%;
   left: 0;
-  top: calc(100% + 2560px);
+  bottom: 0;
   clear: both;
   text-align: center;
   color: #333;
