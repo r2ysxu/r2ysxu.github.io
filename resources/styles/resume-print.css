@@ -62,8 +62,11 @@ a:link {color:#2554C7;text-decoration:none;}
 }
 
 #personal-info {
-    text-align: center;
-    width: 100%;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    text-align: right;
+    margin-right: 15px;
 }
 
 #personal-info td {
