@@ -92,7 +92,7 @@
 
 #water canvas {
   position: absolute;
-  top: 40%;
+  top: 0;
 }
 
 #waves-camera {
@@ -143,7 +143,7 @@
 #underwater {
   position: absolute;
   top: calc(80% + 180px);
-  height: calc(100% + 80em + 600px);
+  height: 2560px;
   left: 0;
   width: 100%;
   background: radial-gradient(circle at center -100%, rgb(10, 31, 51), rgb(3, 11, 21) 70%);
@@ -358,7 +358,7 @@ footer {
   position: absolute;
   width: 100%;
   left: 0;
-  top: calc(200% + 80em + 600px);
+  top: calc(100% + 2560px);
   clear: both;
   text-align: center;
   color: #333;
