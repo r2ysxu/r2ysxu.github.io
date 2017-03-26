@@ -146,7 +146,7 @@
   height: 2560px;
   left: 0;
   width: 100%;
-  background: radial-gradient(circle at center -100%, rgb(10, 31, 51), rgb(3, 11, 21) 70%);
+  background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);
 }
 
 .sunkenMonitor {
