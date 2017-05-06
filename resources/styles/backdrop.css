@@ -166,7 +166,7 @@
 #underwater {
   position: absolute;
   top: calc(80% + 180px);
-  height: 2560px;
+  height: calc(100em + 600px);
   left: 0;
   width: 100%;
   /*background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);*/
