@@ -166,18 +166,3 @@ function closeProjectNote(noteid) {
 	document.getElementById('skill'+noteid+'Task').remove();
 	document.getElementById('skill'+noteid+'TaskLb').remove();
 }
-
-function openProjectDesc(buttonElem, noteid) {
-
-	$('#project1_tab').removeClass('selectedProject');
-	$('#project2_tab').removeClass('selectedProject');
-	$('#project3_tab').removeClass('selectedProject');
-
-
-	document.getElementById('pictoviewTextCell').style.display = 'none';
-	document.getElementById('chitchatTextCell').style.display = 'none';
-	document.getElementById('ovaflowTextCell').style.display = 'none';
-
-	$(buttonElem).addClass('selectedProject');
-	document.getElementById(noteid).style.display = 'block';
-}
