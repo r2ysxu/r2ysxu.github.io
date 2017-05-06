@@ -6,19 +6,18 @@
     <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="resources/styles/backdrop.css" />
 	<link rel="stylesheet" type="text/css" href="resources/styles/animations.css" />
-	<link rel="stylesheet" type="text/css" href="resources/styles/monitor.css" />
 	<link rel="stylesheet" type="text/css" href="resources/styles/componentDiagram.css" />
+	<link rel="stylesheet" type="text/css" href="resources/styles/qualificationDiagram.css" />
 	
 	<script type="text/javascript" src="scripts/lib/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="scripts/lib/waves/shared.js"></script>
 	<script type="text/javascript" src="scripts/lib/waves/simulation.js"></script>
 	<script type="text/javascript" src="scripts/waves.js"></script>
-    <script type="text/javascript" src="scripts/monitor.js"></script>
     <script type="text/javascript" src="scripts/lib/glUtils.js"></script>
 	<script type="text/javascript" src="scripts/lib/matrix.js"></script>
 	<script type="text/javascript" src="scripts/fishtank.js"></script>
 </head>
-<body onload="loadRepeatingDivs()">
+<body>
 	<!-- Sky -->
 	<div class="sky-parallax"></div>
 	<div id="Sky">
@@ -41,9 +40,6 @@
 		</div>
 	</div>
 
-	<div id="city">
-	</div>
-
 	<!-- Water -->
 	<div id="water">
     	<div id="waves-camera"></div>
@@ -53,304 +49,60 @@
 	<!-- Underwater -->
 	<div id="underwater">
 
-		<div id="resume_container" class="float1">
+		<div id="resume_container" class="bubble float1">
 			<div id="resume_center">
 				<a href="resume-printable.html">Resume</a>
 			</div>
 		</div>
-		
+
 		<!-- Qualifications -->
-	    <div id="computerMonitor" class="monitor sunkenMonitor float3">
-	    	<!-- Monitor Stuff -->
-	    	<div class="monitorStand"></div>
-	    	<div class="computerScreen">
-	    		<div class="monitorButton"></div>
-	    	</div>
+   		<div id="qualifications" class="qualificationContainer">
+   			<div class="bubbleContainer">
+   				<div id="q_j2ee" class="bubble">
+   					<span class="bubbleFont_large">Java / J2EE</span>
+   					<div id="q_spring" class="bubble">
+   						<span class="bubbleFont_medium">Spring</span>
+   						<div id="q_springMVC" class="bubble"><span>MVC</span></div>
+   						<div id="q_springSecurity" class="bubble"><span>Security</span></div>
+   						<div id="q_springBatch" class="bubble"><span>Batch</span></div>
+   						<div id="q_springAOP" class="bubble"><span>AOP</span></div>
+   						<div id="q_springBoot" class="bubble"><span>Boot</span></div>
+   					</div>
+   					<div id="q_servlet" class="bubble">
+   						<span>Servlet</span>
+   						<div id="q_s_jsp" class="bubble"><span>JSP</span></div>
+   					</div>
+   					<div id="q_ejb" class="bubble"><span>EJB</span></div>
+   					<div id="q_maven" class="bubble"><span>Maven</span></div>
+   					<div id="q_junit" class="bubble"><span>JUnit</span></div>
+   					<div id="q_osgi" class="bubble"><span>OSGI</span></div>
+   					<div id="q_android" class="bubble"><span>Android</span></div>
+   				</div>
 
-	    	<!-- Window -->
-	    	<div id="skillsWindow" class="qualificationContent"  onclick="hideStartTabs()">
 
-	    		<!-- Source Control Tools -->
-	    		<div id="skillsCvs">
-	    			<div id="skillsSVN" class="desktopIconDiv" style="top:10px; left: 10px"  onmousedown="startDragIcon('skillsSVN', event)" onmouseup="stopDragIcon('skillsSVN', event)">
-	    				<img src="resources/images/svnLogo.png" class="desktopIcon" />
-	    				<br />
-	    				SVN
-	    			</div>
-	    			<div id="skillsGit" class="desktopIconDiv" style="top:100px; left: 10px">
-	    				<img src="resources/images/gitLogo.png" class="desktopIcon" />
-	    				<br />
-	    				Git
-	    			</div>
-	    			<div id="skillsUML" class="desktopIconDiv" style="top:200px; left: 10px">
-	    				<img src="resources/images/umlLogo.png" class="desktopIcon" />
-	    				<br />
-	    				UML
-	    			</div>
-	    		</div>
+   				<div id="q_javascript" class="bubble">
+   					<span class="bubbleFont_large">Javascript</span>
+   					<div id="q_j_jquery" class="bubble"><span>jQuery</span></div>
+   					<div id="q_j_jangular" class="bubble"><span>AnuglarJS</span></div>
+   					<div id="q_j_jreact" class="bubble"><span>ReactJS</span></div>
+   					<div id="q_j_ajax" class="bubble"><span>AJAX</span></div>
+   					<div id="q_j_websocket" class="bubble"><span>Websocket</span></div>
+   					<div id="q_j_webgl" class="bubble"><span>WebGL</span></div>
+   				</div>
 
-	    		<!-- Databases -->
-	    		<div>
-		    		<div class="desktopIconDiv" style="top:400px; left: 300px">
-		    			<img src="resources/images/database.png" class="desktopIcon" />
-		    			<br /> SQL
-		    		</div>
-		    		<div class="floatingWords float1" style="top:400px; left: 258px">MySQL</div>
-		    		<div class="floatingWords float2" style="top:420px; left: 268px">Sqlite</div>
-		    		<div class="floatingWords float3" style="top:400px; left: 340px">Oracle</div>
-		    		<div class="floatingWords float4" style="top:420px; left: 340px">T-SQL</div>
-	    		</div>
+   				<div id="q_html" class="bubble"><span>HTML</span></div>
+   				<div id="q_css" class="bubble"><span>CSS</span></div>
 
-	    		<!-- Browser -->
-		    	<div id="browserDiv" class="window browserWindow" style="top: 40px; left: 250px;">
-		    		<div id="browserBar" class="windowMenuBar noSelect" onmousedown="startDragWindow('browserDiv', event)" onmouseup="stopDragWindow('browserDiv', event)">
-		    			<img src="resources/images/window2k/ieLogo.png" class="menuBarLogo" draggable="false" />
-	    				<div class="windowTitle" unselectable="on">Front-End</div>
-	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('browser')" />
-	    					<input type="button" value="X" disabled />
-	    				</div>
-	    			</div>
-	    				<div class="browserBar">
-	    					<img src="resources/images/window2k/ie5Bar.png" class="ieBar" draggable="false" />
-		    				<div>
-		    					Address
-		    					<input type="text" value="http://www.frontend.com"></input>
-		    				</div>
-		    			</div>
-	    			<div class="browserText">
-		    			<div id="frontEndDiv" >
-	                        <h4>HTML</h4>
-	                        <h4>CSS</h4>
-	                        <h4>Javascript</h4>
-	                        <ul>
-	                            <li>Ajax</li>
-	                            <li>jQuery</li>
-	                            <li>extJS</li>
-	                            <li>AngularJS</li>
-	                        </ul>
-		    			</div>
-			    	</div>
-		    	</div>
+   				<div id="q_c" class="bubble"><span>C</span></div>
+   				<div id="q_cpp" class="bubble"><span>C++</span></div>
 
-		    	<!-- Notepad -->
-	    		<div id="notepadDiv" class="window" style="top: 220px; left: 480px;">
-	    			<div id="notepadBar" class="windowMenuBar" onmousedown="startDragWindow('notepadDiv', event)" onmouseup="stopDragWindow('notepadDiv', event)">
-	    				<img src="resources/images/window2k/cmdIcon.png" class="menuBarLogo" draggable="false" />
-	    				<div class="windowTitle noSelect" unselectable="on">Languages</div>
-	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('notepad')" />
-	    					<input type="button" value="X" disabled />
-	    				</div>
-	    			</div>
-			        <div id="javaSkillsDiv" class="notepadText">
-			        	<div><span class="reserveText">public class </span> J2EE <span class="reserveText">extends</span> Java {</div>
-			        	<div class="notepadTextTab1">
-			        		<div><span class="reserveText">void</span> Servlets ( ){}</div>
-			        		<div><span class="reserveText">void</span> EJB ( ){}</div>
-			        		<div><span class="reserveText">void</span> SpringMVC ( ){}</div>
-			        		<div><span class="reserveText">void</span> Hibernate ( ){}</div>
-			        		<div><span class="reserveText">void</span> JSP ( ){}</div>
-			        		<div><span class="reserveText">void</span> JSF ( ){}</div>
-			        		<div><span class="reserveText">void</span> Websocket ( ){}</div>
-			        		<div><span class="reserveText">void</span> SOAP ( ){}</div>
-			        		<div>REST JaxRs ( ){}</div>
-			        		<div><span class="reserveText">boolean</span> JUnit ( ){}</div>
-			        		<div><span class="reserveText">int</span> Maven ( ){}</div>
-			        	</div>
-			        	}
-			        	<div>
-			        	</div>
-			        	<div>C# .NET framework </div>
-			        	<div>C, C++ </div>
-			        	<div>XML, XSD</div>
-                    </div>
-	    		</div>
+   				<div id="q_soap" class="bubble"><span>SOAP</span></div>
+   				<div id="q_rest" class="bubble"><span>REST</span></div>
 
-	    		<!-- Projects -->
-
-	    		<!-- Ovaflow -->
-	    		<div id="ovaflowDiv" class="window projectWindow" style="top: 0px; left: 0px; display: none">
-	    			<div class="windowMenuBar" onmousedown="startDragWindow('ovaflowDiv', event)" onmouseup="stopDragWindow('ovaflowDiv', event)">
-	    				<img id="skillWindovaflowIcon" src="resources/images/ovaflow-logo.png" class="menuBarLogo" draggable="false" />
-	    				<div class="windowTitle noSelect" unselectable="on">Ovaflow</div>
-	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('ovaflow')" />
-	    					<input type="button" value="X" onclick="closeProjectNote('ovaflow')" />
-	    				</div>
-	    			</div>
-	    			<div id="ovaflowDescription" class="windowProjectDesc">
-	    				<h1>Ovaflow</h1>
-	                    <p><img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="projectLogo" />Ovaflow is a light-weight rhythm game fueled by the user community. (similar to step-mania) Currently developed for the Android platform only. The objective of the game is to press the correct sequence of keys or buttons as notes cascade down the screen towards a special buttons on the screen. The game&#39;s score will be calculated based on the accuracy of the button presses atop some precision tolerance, and might end prematurely if the user makes too many errors. The differentiating factor is that all the "beatmaps" are created by users which may be uploaded onto the central repository and downloaded along with avatars.</p>
-	                    <p>What started as a simple prototype for a class ended as a fully functional game. I was primarily responsible for the Android platform but also built up the initial framework for the server</p>
-		                <h2>Technologies</h2>
-		                <p>J2EE, Android, OpenGL ES 2.0, REST, Sqlite, MySQL</p>
-	                    <h2>Design</h2>
-	                    <p>The project is divided into two parts, the Android platform (Client) and the server repository.</p>
-	                    <h3>Client</h3>
-	                    <p>The Client only supports Android devices. The rendering is done by using OpenGL ES 2.0. The rendering is displayed via a SurfaceView. The downloading of songs is done by sending REST-ful requests to the server and using <i>AsyncTasks</i> to fetch the songs over a stream.</p>
-	                    <h3>Server</h3>
-	                    <p>The server provides the user high scores, avatars, and a song repository accessed via JAX-RS</p>
-	                    <hr />
-	                    <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu/Ovaflow-Android">github.com</a></p>
-	    			</div>
-                </div>
-
-                <!-- Chitchat -->
-               	<div id="chitchatDiv" class="window projectWindow" style="top: 0px; left: 0px; display: none">
-	    			<div class="windowMenuBar" onmousedown="startDragWindow('chitchatDiv', event)" onmouseup="stopDragWindow('chitchatDiv', event)">
-	    				<img id="skillWindchitchatIcon" src="resources/images/chitchat-logo.png" class="menuBarLogo" draggable="false" />
-	    				<div class="windowTitle noSelect" unselectable="on">Chitchat</div>
-	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('chitchat')" />
-	    					<input type="button" value="X" onclick="closeProjectNote('chitchat')" />
-	    				</div>
-	    			</div>
-	    			<div id="chitchatDescription" class="windowProjectDesc">
-		    			<h1>Chitchat</h1>
-	                    <p><img id="ovaflowLogo" src="resources/images/chitchat-logo.png" class="projectLogo" /> Chit-chat is an interactive chat-room where participants can talk to each other. Aside from being able to talk to each other, they can also walk and jump around in their avatars which can be seen by other participants.</p>
-	                    <p>This started as a one day/night experiment where I wanted to learn about Java Websockets as well as WebGL. </p>
-	                    <p>The sprites are not drawn by me and will be replaced upon request from the original author. This is a simple exerpiment and I do not intend to infringe on any copyright.</p>
-	                    <h2>Technologies</h2>
-	                    <p>J2EE, Websocket, WebGL, ThreeJS, HTML5, CSS3</p>
-	                    <h2>Design</h2>
-	                    <p>The web application is developed using websockets using javascript to connect to a Java Websocket service.</p>
-	                    <h3>Client</h3>
-	                    <p>The client consists of HTML5 components. Javascripts using WebGL as well as AJAX calls to the websocket. JSON is (temporarily) used to convey all messages. (In the future, I would like to send encoded byte streams)</p>
-	                    <h3>Server</h3>
-	                    <p>The server uses Java Websockets to relay messages to all participating parties by encapsulating them through JSON request/responses</p>
-	                    <hr />
-	                    <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu/Chitchat">github.com</a></p>
-	    			</div>
-                </div>
-
-                <!-- Pictoview -->
-                <div id="pictoviewDiv" class="window projectWindow" style="top: 0px; left: 0px; display: none">
-	    			<div class="windowMenuBar" onmousedown="startDragWindow('pictoviewDiv', event)" onmouseup="stopDragWindow('pictoviewDiv', event)">
-	    				<img src="resources/images/pictoview-logo.png" class="menuBarLogo" draggable="false" />
-	    				<div class="windowTitle noSelect" unselectable="on">Pictoview</div>
-	    				<div class="windowButtons">
-	    					<input type="button" value="_" onclick="minimizeWindow('pictoview')" />
-	    					<input type="button" value="X" onclick="closeProjectNote('pictoview')" />
-	    				</div>
-	    			</div>
-	    			<div id="pictoviewDescription" class="windowProjectDesc">
-	    				<h1>Picture Viewer Repository</h1>
-	                    <p><img id="pictoviewLogo" src="resources/images/pictoview-logo.png" class="projectLogo" />Pictoview is a central photos (and later songs/videos) repository. It allows viewers to access their photos in an organized and easy to use manner. It includes the ability to add customized tags to albums and later search upon those tags. The app allows users to store images in a centralized database without having to store the data on their devices.</p>
-	                    <p>It started as a means for me to store my large repository of pictures and organize them in a manageable fashion without having to store all the pictures on my mobile devices.</p>
-	                    <h2>Technologies</h2>
-	                    <p>J2EE, SpringMVC, REST, EJB, Sqlite, HTML5, CSS3, Javascript, AngularJS, jQuery, Android</p>
-	                    <h2>Design</h2>
-	                    <p>The project is divided into three Components, the client, the request server, and the Enterprise Java Bean.</p>
-	                    <h3>Client</h3>
-	                    <h4>Android</h4>
-	                        <p>The Android client uses volley to send HTTP requests to retrieve informations &amp; photos from the server using REST-ful API. <i>(Currently in development)</i></p>
-	                    <h4>Browser</h4>
-	                        <p>The browser is partially generated HTML page via JSP, with dynamically generated content via Ajax calls. Uses jQuery to process client response data and page dynamics.</p>
-	                    <h3>Server</h3>
-	                    <h4>Spring</h4>
-	                        <p>Uses Spring MVC to generate client JSP pages as well as Ajax JSON responses. Images are send via output streams.
-	                        </p>
-	                    <h4>REST</h4>
-	                        <p>Uses JAX-RS to supply API calls to the client. The information is taken from the enterprise bean.</p>
-	                    <h4>EJB</h4>
-	                    <p>The EJB provides access to the database which stores all the images and their information</p>
-	                    <hr />
-	                    <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu-Pictoview">github.com</a></p>
-	    			</div>
-                </div>
-
-	    		<!-- Programs -->
-	    		<div id="skillsProgramsTab" style="display: none">
-	    		</div>
-
-	    		<div id="skillsProjectsTab" class="startProjectTab" style="display: none">
-	    			<div class="startTab" onclick="openProjectNote('pictoview')">
-	    				<img src="resources/images/pictoview-logo.png" class="startIcon smallStartIcon noSelect" draggable="false" />
-	    				Pictoview
-	    			</div>
-	    			<div class="startTab" onclick="openProjectNote('chitchat')">
-	    				<img src="resources/images/chitchat-logo.png" class="startIcon smallStartIcon noSelect" draggable="false" />
-	    				Chitchat
-	    			</div>
-	    			<div class="startTab" onclick="openProjectNote('ovaflow')">
-	    				<img src="resources/images/ovaflow-logo.png" class="startIcon smallStartIcon noSelect" draggable="false" />
-	    				Ovaflow
-	    			</div>
-	    		</div>
-
-	    		<div id="skillsServersTab" class="startServerTab" style="display: none;">
-	    			<div id="serversDiv" class="tabDiv">
-                        <h5 class="startTab">Tomcat</h5>
-                        <h5 class="startTab">Glassfish</h5>
-                        <h5 class="startTab">Websphere</h5>
-                        <h5 class="startTab">Weblogic</h5>
-                        <h5 class="startTab">IIS</h5>
-                    </div>
-	    		</div>
-
-	    		<!-- Start Program -->
-	    		<div id="skillsStartMenu" class="startWindow noSelect" unselectable="on" style="display:none;">
-	    			<hr />
-	    			<div class="startTab" onmouseover="showStartTab('skillsProgramsTab')">
-	    				<img src="resources/images/window2k/wind2kProgramFiles.png" class="startIcon noSelect" draggable="false"  /> Programs
-	    				<div class="startArrow" ></div>
-	    			</div>
-	    			<div class="startTab" onmouseover="showStartTab('skillsProjectsTab')">
-	    				<img src="resources/images/window2k/wind2kDocuments.png" class="startIcon" draggable="false" />
-	    				Projects
-	    				<div class="startArrow" ></div>
-	    			</div>
-	    			<div class="startTab" onmouseover="showStartTab('skillsServersTab')">
-	    				<img src="resources/images/window2k/wind2kSettings.png" class="startIcon" draggable="false" />
-	    				Servers
-	    				<div class="startArrow" ></div>
-	    			</div>
-	    			<div class="startTab" onmouseover="showStartTab('')">
-	    				<img src="resources/images/window2k/wind2kSearch.png" class="startIcon" draggable="false" />
-	    				Search
-	    				<div class="startArrow" ></div>
-	    			</div>
-	    			<div class="startTab" onmouseover="showStartTab('')">
-	    				<img src="resources/images/window2k/wind2kHelp.png" class="startIcon" draggable="false" />
-	    				Help
-	    			</div>
-	    			<div class="startTab" onmouseover="showStartTab('')">
-	    				<img src="resources/images/window2k/wind2kRun.png" class="startIcon" draggable="false" />
-	    				Run...
-	    			</div>
-	    			<hr />
-	    			<div class="startTab">
-	    				<img src="resources/images/window2k/wind2kShutdown.png" class="startIcon" draggable="false" />
-	    				Shut Down
-	    			</div>
-	    		</div>
-
-		    	<!-- Taskbar -->
-		    	<div id="skillsTaskbar" class="taskbar noSelect">
-		    		<div id="clockTask" class="clockTask">
-		    			<img src="resources/images/window2k/wind2kSound.png" class="taskbarLogo" />
-		    			<span id="clockTaskSpan"></span>
-		    		</div>
-		    		<input id="skillStartTask" type="checkbox" name="task" class="taskbarBox" onclick="showStartMenu(); event.stopPropagation();" />
-		    		<label for="skillStartTask">
-		    			<img src="resources/images/window2k/window2kStart.png" class="taskbarLogo" />Start
-		    		</label>
-		    		<img src="resources/images/window2k/window2kTask.png" class="taskbarTasks" draggable="false" />
-
-		    		<input id="skillFrontendTask" type="checkbox" name="task" class="taskbarBox"  onclick="toggleWindow(this, 'browserDiv')" checked />
-		    		<label for="skillFrontendTask">
-		    			<img src="resources/images/window2k/ieLogo.png" class="taskbarLogo" draggable="false" /> Frontend
-		    		</label>
-
-		    		<input id="skillLanguageTask" type="checkbox" name="task" class="taskbarBox" onclick="toggleWindow(this, 'notepadDiv')" checked />
-		    		<label for="skillLanguageTask">
-		    			<img src="resources/images/window2k/cmdIcon.png" class="taskbarLogo" draggable="false" /> Languages
-		    		</label>
-		    	</div>
-	    	</div>
-		</div>
-		<!-- End Computer Screen -->
+     			<div id="q_git" class="bubble"><span>Git</span></div>
+   				<div id="q_svn" class="bubble"><span>SVN</span></div>
+   			</div>
+    	</div>
 
     	<div id="education" class="educationContainer">
     		<h1>Education</h1>

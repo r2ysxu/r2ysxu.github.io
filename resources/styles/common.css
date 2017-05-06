@@ -43,3 +43,8 @@ a {
     color: #336;
     text-decoration: none;
 }
+
+@font-face {
+  font-family: 'Waterst';
+  src: url('../images/waterst.ttf');
+}

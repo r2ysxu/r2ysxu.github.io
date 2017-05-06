@@ -1,0 +1,237 @@
+#q_j2ee {
+	top: 10em;
+  left: 0;
+  right: 0;
+  width: 10em;
+  height: 10em;
+}
+
+.bubbleFont_large {
+  font-size: 20pt;
+}
+
+.bubbleFont_medium {
+	font-size: 16pt;
+}
+
+/* Spring */
+
+#q_spring {
+	top: -5em;
+  left: -5em;
+  right: 0;
+  width: 7em;
+  height: 7em;
+}
+
+#q_springMVC {
+	top: 3.5em;
+  left: -9em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_springSecurity {
+	top: -1em;
+  left: -10em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_springBatch {
+  top: -3em;
+  left: 4em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_springAOP {
+	top: -4em;
+  left: -3em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_springBoot {
+  top: 1em;
+  left: 6em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+/* end spring */
+
+#q_servlet {
+  top: 3em;
+  left: -15em;
+  right: 0;
+  width: 7em;
+  height: 7em;
+}
+
+#q_s_jsp {
+	top: -3em;
+  left: -8em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_ejb {
+  top: 8em;
+  left: -8em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_maven {
+  top: 9em;
+  left: 0.5em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_junit {
+  top: 7em;
+  left: 7em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_osgi {
+  top: 3em;
+  left: 9em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+/* JS */
+
+#q_javascript {
+	top: 16em;
+  left: 12em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_j_jquery {
+	top: -4em;
+  left: 0em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_j_jangular {
+	top: -2em;
+  left: -9em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_j_jreact {
+	top: -2em;
+  left: 5em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_j_ajax {
+  top: 4em;
+  left: 5em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_j_websocket {
+	top: 6em;
+  left: 0em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#q_j_webgl {
+  top: 4em;
+  left: -9em;
+  right: 0;
+  width: 5em;
+  height: 5em;
+}
+
+/* Others */
+
+#q_html {
+	top: 0em;
+	left: 5em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_css {
+	top: 1em;
+	left: 11em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_c {
+  top: 9em;
+  right: 5em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_cpp {
+	top: 7em;
+  right: 11em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_soap {
+	top: 15em;
+	right: 15em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_rest {
+	top: 14em;
+  right: 21em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_git {
+  top: 2em;
+  right: 24em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_svn {
+  top: 1em;
+  right: 18em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_android {
+  top: -4em;
+  right: -8em;
+  width: 7em;
+  height: 7em;
+}

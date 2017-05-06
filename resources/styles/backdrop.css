@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Waterst';
+  src: url('../images/waterst.ttf');
+}
+
 /* Sky */
 
 #sky {
@@ -103,14 +108,17 @@
   transform-style: preserve-3d;
 }
 
-/* R container */
+/* Resume container */
 #resume_container {
-  position: absolute;
   top: 5em;
   left: 0;
   right: 0;
   width: 7em;
   height: 7em;
+}
+
+.bubble {
+  position: absolute;
   border-radius: 50%;
   margin: auto;
   text-align: center;
@@ -119,9 +127,30 @@
   transition: 1s;
 }
 
-#resume_container:hover {
+.bubble span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  margin: auto;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Waterst';
+}
+
+.bubble:hover {
   /*box-shadow: inset -6px -6px 25px rgb(21, 50, 78), 5px 5px 5px; */
   background-color: rgba(9, 27, 49, 0.5);
+}
+
+
+
+.bubble a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Berkshire Swash', Helvetica, sans-serif;
 }
 
 #resume_center {
@@ -133,12 +162,6 @@
   height: 1em;
 }
 
-#resume_center a {
-  text-decoration: none;
-  color: #fff;
-  font-family: 'Berkshire Swash', Helvetica, sans-serif;
-}
-
 /* Underwater */
 #underwater {
   position: absolute;
@@ -146,7 +169,30 @@
   height: 2560px;
   left: 0;
   width: 100%;
-  background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);
+  /*background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);*/
+  background: url('../images/pexels-photo.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#underwater:before {
+  position: absolute;
+  top: -100%;
+  width: 200%;
+  height: 300%;
+  content:"";
+  background: url('../images/sunken_ship.png') 400px 0px no-repeat;
+  background-attachment: fixed;
+  background-size: 400px 300px;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  opacity: 0.2;
 }
 
 .sunkenMonitor {
@@ -157,6 +203,20 @@
 #tank-canvas {
   margin-top: 1em;
   box-shadow: inset 0px 10px 25px rgba(0, 0, 0, 0.5), inset 0px -10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Qualifications */
+.qualificationContainer {
+  margin-top: 14em;
+  width: 100vw;
+  height: 30em;
+  position: relative;
+  /*background-color: #30586f;*/
+}
+
+.bubbleContainer {
+  width: 100%;
+  height: 100%;
 }
 
 /* Projects */
@@ -255,6 +315,11 @@
 
 .projectInfo {
 
+}
+
+.projectLogo {
+    width: 10em;
+    float: right;
 }
 
 /**/
