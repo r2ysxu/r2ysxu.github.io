@@ -11,7 +11,8 @@
 }
 
 .cd_component {
-	border : 1px solid black;
+	border : 1px solid #fff;
+	color: #fff;
 	position: absolute;
 	padding-left: 10px;
 	padding-right: 10px;
