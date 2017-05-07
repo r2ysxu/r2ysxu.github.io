@@ -78,7 +78,6 @@ function resizeFishtank() {
 	canvasEl.width = document.body.clientWidth;
 	tankRatio = canvasEl.width / canvasEl.height;
 	gl.viewport(0, 0, canvasEl.width, canvasEl.height);
-	render();
 }
 
 var FishTank = function(canvas) {
