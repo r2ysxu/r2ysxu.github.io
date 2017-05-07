@@ -60,6 +60,7 @@ $( document ).ready(function() {
 				lastTime = nowTime;
 			}
 
+			window.addEventListener('resize', resizeFishtank);
 	        requestAnimationFrame(render);
     	};
     	$(window).load(function(){
@@ -71,6 +72,14 @@ $( document ).ready(function() {
 	    aquaMain();
 	}
 });
+
+function resizeFishtank() {
+	var canvasEl = $('#tank-canvas')[0];
+	canvasEl.width = document.body.clientWidth;
+	tankRatio = canvasEl.width / canvasEl.height;
+	gl.viewport(0, 0, canvasEl.width, canvasEl.height);
+	render();
+}
 
 var FishTank = function(canvas) {
 	var self = this;
@@ -102,7 +111,6 @@ var FishTank = function(canvas) {
 
 
 	self.init = function() {
-		console.log(self);
 		gl = self.canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
 
         if (gl) {

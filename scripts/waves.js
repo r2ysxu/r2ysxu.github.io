@@ -33,7 +33,7 @@ $( document ).ready(function() {
 	        }
 	    };
 
-
+		window.addEventListener('resize', onresize);
 		onresize();
        	var lastTime = (new Date()).getTime();
     	var render = function render(currentTime) {
