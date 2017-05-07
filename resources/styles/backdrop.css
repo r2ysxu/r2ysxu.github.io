@@ -220,101 +220,76 @@
 }
 
 /* Projects */
-
-#projects {
+.projectContainer {
   position: relative;
+  height: 65em;
+  background-color: #000;
+  border: 1em solid black;
 }
 
-.projectText {
-  margin-left: 1em;
-  color: #fff;
-  font-family: 'Arizonia', Helvetica, sans-serif;
-  font-size: 32pt;
-}
-
-.projectTabs {
-    margin: 0 2em;
-    padding: 2em 0;
-    background-color: #3975bf;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-    width: 10em;
-    box-shadow: 10px 0px 15px rgba(0,0,0,0.25);
-    border: 1px solid #000;
-    background: -moz-linear-gradient(right, rgb(26, 79, 146), #3975bf); /* FF3.6-15 */
-    background: -webkit-linear-gradient(right, rgb(26, 79, 146), #3975bf); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(right, rgb(26, 79, 146), #3975bf); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-.projectTab {
-  position: relative;
-  width: 10em;
-  height: 10em;
-}
-
-.selectedProject {
-  background-color: #1d3a5f;
-}
-
-.projectTab:hover {
-  box-shadow: inset 10px 0px 15px rgba(0,0,0,0.25);
-}
-
-.projectTab img {
+.projectCarousel {
   position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-#project1_tab img {
-}
-
-#project2_tab img {
-  margin: 2em 1em 1em 1em;
-  width: 8em;
-}
-
-#project3_tab img {
-  margin-top: 1em;
-}
-
-.project1 {
-
-}
-
-.projectContent {
-  overflow: auto;
-  height: calc(100% - 6em);
-  margin: 2em;
-  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0,1) 80%, rgba(79, 110, 197,0));
-}
-
-.projectContent::-webkit-scrollbar {
-    width: 12px;
-}
- 
-.projectContent::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-    border-radius: 10px;
-}
- 
-.projectContent::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgba(0,0,0, 0.4);
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-
-.projectArticle {
-  position: absolute;
-  width: calc(100% - 14em);
-  height: 100%;
-  top: 0;
-  left: 12em;
-  border-top-right-radius: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 3em);
+  width: calc(100% - 3em);
+  padding: 1em 2em;
 }
 
 .projectInfo {
+  color: #fff;
+}
 
+.projectDesign {
+  background-color: rgb(255, 255, 255);
+}
+
+.projectCarouselControl {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.8);
+}
+
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 .projectLogo {
@@ -322,10 +297,15 @@
     float: right;
 }
 
+.demoDiv {
+  float: right;
+}
+
 /**/
 
 .projectInfoTab {
   border-top-right-radius: 25px;
+  border-bottom: 1px solid #fff;
 }
 
 .projectInfo h1 {
@@ -394,10 +374,12 @@
 }
 
 .infoContent {
-    background-color: #1d3a5f;
-    border-bottom-right-radius: 25px;
-    border: 1px solid #000;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5), -5px 0px 5px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
 }
 
 .eduContent {
@@ -432,3 +414,5 @@ footer {
   background: -webkit-linear-gradient(top, rgb(3, 11, 21), #000); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(top, rgb(3, 11, 21), #000); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
+/* Experimental */

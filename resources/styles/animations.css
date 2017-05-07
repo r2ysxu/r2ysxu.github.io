@@ -166,3 +166,20 @@
     65% {-moz-transform:translate(-50vw, 0px);}
     66% {-moz-transform:translate(-50vw, 0px); display: none; }
 }
+
+.swipe {
+  -webkit-animation-name: swipe;
+  -webkit-animation-duration: 1.5s;
+  animation-name: swipe;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes swipe {
+    from {-webkit-transform:translate(100vw, 0px);}
+    to {-webkit-transform:translate(0, 0px);}
+}
+
+@keyframes swipe {
+    from {transform:translate(100vw, 0px);}
+    to {transform:translate(0, 0px);}
+}
