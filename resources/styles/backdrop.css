@@ -146,12 +146,25 @@
   background-color: rgba(9, 27, 49, 0.5);
 }
 
-
-
 .bubble a {
   text-decoration: none;
   color: #fff;
   font-family: 'Berkshire Swash', Helvetica, sans-serif;
+}
+
+.bubble {
+    animation-name: float3;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: float3;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: float3;
+    -moz-animation-duration: 10s;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
 }
 
 #resume_center {
@@ -418,3 +431,9 @@ footer {
 }
 
 /* Experimental */
+#toggle_fish {
+  top: 0;
+  right: 2em;
+  width: 7em;
+  height: 7em;
+}

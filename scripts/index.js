@@ -51,3 +51,7 @@ function openDesign(buttonElem) {
 	$('.projectInfo').hide();
 	$('.projectDesign').show();
 }
+
+function toggleFishes() {
+	$('#tank-canvas').toggle();
+}
