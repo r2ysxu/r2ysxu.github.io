@@ -2,7 +2,8 @@ var currentProject = 0;
 var MAX_PROJECT = 3;
 
 
-function openProject(currentProject) {
+function openProject(projectId) {
+	currentProject = projectId;
 	var p_id = "#";
 	$('.dot').removeClass('active');
 	$('.dot').eq(currentProject).addClass('active');
@@ -33,23 +34,6 @@ function openPrevProject() {
 	else currentProject = MAX_PROJECT - 1;
 
 	openProject(currentProject);
-}
-
-function openDescription(buttonElem) {
-	$('.tabBar-item').removeClass('tabBar-item_selected');
-
-	$(buttonElem).addClass('tabBar-item_selected');
-
-	$('.projectInfo').show();
-	$('.projectDesign').hide();
-}
-
-function openDesign(buttonElem) {
-	$('.tabBar-item').removeClass('tabBar-item_selected');
-
-	$(buttonElem).addClass('tabBar-item_selected');
-	$('.projectInfo').hide();
-	$('.projectDesign').show();
 }
 
 function toggleFishes() {
