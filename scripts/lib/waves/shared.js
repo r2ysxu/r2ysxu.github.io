@@ -3,7 +3,7 @@ var INITIAL_SIZE = 250,
     INITIAL_CHOPPINESS = 1;
 
 var CLEAR_COLOR = [1.0, 1.0, 1.0, 0.0],
-    GEOMETRY_ORIGIN = [-2000.0, -1000.0],
+    GEOMETRY_ORIGIN = [-4000.0, -1000.0],
     SUN_DIRECTION = [-1.0, 1.0, 1.0],
     OCEAN_COLOR = [0.004, 0.016, 0.047],
     SKY_COLOR = [3.2, 9.6, 12.8],
