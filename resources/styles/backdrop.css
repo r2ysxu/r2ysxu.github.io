@@ -138,6 +138,7 @@
   text-decoration: none;
   color: #fff;
   font-family: 'Waterst';
+  cursor: default;
 }
 
 .bubble:hover {
@@ -166,7 +167,7 @@
 #underwater {
   position: absolute;
   top: calc(80% + 180px);
-  height: calc(100em + 600px);
+  height: 115em;
   left: 0;
   width: 100%;
   /*background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);*/
@@ -201,7 +202,8 @@
 }
 
 #tank-canvas {
-  margin-top: 1em;
+  position: absolute;
+  margin-top: -2em;
   box-shadow: inset 0px 10px 25px rgba(0, 0, 0, 0.5), inset 0px -10px 20px rgba(0, 0, 0, 0.5);
 }
 
