@@ -1,5 +1,5 @@
 #q_j2ee {
-	top: 10em;
+	top: 7em;
   left: 0;
   right: 0;
   width: 10em;
@@ -118,7 +118,7 @@
 
 #q_javascript {
 	top: 16em;
-  left: 12em;
+  left: 5em;
   width: 7em;
   height: 7em;
 }
@@ -175,63 +175,63 @@
 
 #q_html {
 	top: 0em;
-	left: 5em;
+	left: 7%;
   width: 7em;
   height: 7em;
 }
 
 #q_css {
 	top: 1em;
-	left: 11em;
+	left: 40%;
   width: 7em;
   height: 7em;
 }
 
 #q_c {
-  top: 9em;
-  right: 5em;
+  top: 11em;
+  right: 10%;
   width: 7em;
   height: 7em;
 }
 
 #q_cpp {
-	top: 7em;
-  right: 11em;
+	top: 6em;
+  right: 12%;
   width: 7em;
   height: 7em;
 }
 
 #q_csharp {
-  top: 14em;
-  right: 6em;
+  top: 16em;
+  right: 10%;
   width: 7em;
   height: 7em;
 }
 
 #q_soap {
-	top: 15em;
-	right: 15em;
+	bottom: 1.5em;
+	right: 9em;
   width: 7em;
   height: 7em;
 }
 
 #q_rest {
-	top: 14em;
-  right: 21em;
+  bottom: 1.5em;
+  right: 3em;
   width: 7em;
   height: 7em;
 }
 
 #q_git {
-  top: 2em;
-  right: 24em;
+  top: 15em;
+  left: 5%;
   width: 7em;
   height: 7em;
 }
 
 #q_svn {
-  top: 1em;
-  right: 18em;
+  top: 20em;
+  left: 5%;
   width: 7em;
   height: 7em;
 }
