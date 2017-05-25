@@ -1,6 +1,13 @@
 var currentProject = 0;
 var MAX_PROJECT = 3;
 
+function loader() {
+	$(window).on("load", loaderHandler)
+}
+
+function loaderHandler() {
+	$('.loader').hide();
+}
 
 function openProject(projectId) {
 	currentProject = projectId;
