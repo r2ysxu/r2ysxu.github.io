@@ -390,6 +390,10 @@ footer {
   background: linear-gradient(top, rgb(3, 11, 21), #000); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+footer a {
+  color: white;
+}
+
 /* Experimental */
 #toggle_fish {
   top: 0;
