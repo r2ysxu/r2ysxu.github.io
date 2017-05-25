@@ -7,11 +7,11 @@ $( document ).ready(function() {
 	    var cameraEl = $('#waves-camera')[0];
 	    var simulator = new Simulator(canvasEl, window.innerWidth, window.innerHeight);
 
-	    var width = document.body.clientWidth,
+	    var width = document.body.clientWidth + 20,
         	height = window.innerHeight;
 
 	    var onresize = function () {
-	        var windowWidth = document.body.clientWidth,
+	        var windowWidth = document.body.clientWidth + 20,
 	        windowHeight = FIXED_CANVAS_HEIGHT;
 
 	        if (windowWidth / windowHeight > MIN_ASPECT) {
