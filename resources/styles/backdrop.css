@@ -9,7 +9,7 @@
   height: 100vh;
   left: 0;
   top: 0;
-  background-color: #141414;
+  background-color: #02c4fc;
   z-index: 100;
 }
 
@@ -204,7 +204,7 @@
   left: 0;
   width: 100%;
   /*background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);*/
-  background: url('../images/pexels-photo.jpg');
+  background: url('../images/underwater-ocean.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

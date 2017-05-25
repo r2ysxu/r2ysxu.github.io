@@ -183,3 +183,21 @@
     from {transform:translate(100vw, 0px);}
     to {transform:translate(0, 0px);}
 }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: fade;
+  -moz-animation-duration: 1s;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+   0% {opacity: 1;}
+   100% {opacity: 0; display: none; z-index: -100}
+}

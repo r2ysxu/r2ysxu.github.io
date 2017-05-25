@@ -6,7 +6,7 @@ function loader() {
 }
 
 function loaderHandler() {
-	$('.loader').hide();
+	$('.loader').addClass("fade");
 }
 
 function openProject(projectId) {
