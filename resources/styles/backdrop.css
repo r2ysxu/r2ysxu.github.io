@@ -226,6 +226,7 @@
   width: 100vw;
   height: 30em;
   position: relative;
+  display: flex;
   /*background-color: #30586f;*/
 }
 
