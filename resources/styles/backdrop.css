@@ -365,10 +365,10 @@ footer {
   clear: both;
   text-align: center;
   color: #333;
-  background: #fff; /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(3, 11, 21), #000); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(3, 11, 21), #000); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(top, rgb(3, 11, 21), #000); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #000;
+  background: -moz-linear-gradient(top, rgb(3, 11, 21), #000);
+  background: -webkit-linear-gradient(top, rgb(3, 11, 21), #000);
+  background: linear-gradient(top, rgb(3, 11, 21), #000);
 }
 
 footer a {
