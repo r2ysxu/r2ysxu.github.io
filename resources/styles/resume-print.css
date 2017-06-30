@@ -28,7 +28,6 @@ h2 {
 }
 
 td {
-    font-size: 12px;
     padding-top: 0px;
     padding-bottom: 0px;
     vertical-align: top;
@@ -72,6 +71,7 @@ a:link {color:#2554C7;text-decoration:none;}
     right: 0;
     text-align: right;
     margin-right: 15px;
+    font-size: 14pt;
 }
 
 #personal-info td {
@@ -159,6 +159,9 @@ a:link {color:#2554C7;text-decoration:none;}
     margin-bottom: 0;
 }
 
+#experience {
+}
+
 .experience-type {
     margin-left: 2em;
 }
@@ -172,7 +175,7 @@ a:link {color:#2554C7;text-decoration:none;}
 }
 
 .experience-type span {
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .experience-type label {
