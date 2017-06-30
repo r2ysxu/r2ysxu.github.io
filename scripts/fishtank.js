@@ -3,7 +3,7 @@ var tankRatio;
 var MAX_FISH_FRAME = 16;
 var FISH_COLOR_TYPES = 3;
 
-$( document ).ready(function() {
+function loadFishTank() {
 
 	var createRandomFish = function(fish, canvasEl, isLeft) {
 		var randomSize = (Math.random() * 0.5) + 0.1;
@@ -63,15 +63,13 @@ $( document ).ready(function() {
 			window.addEventListener('resize', resizeFishtank);
 	        requestAnimationFrame(render);
     	};
-    	$(window).load(function(){
-    		render();
-    	});
+    	render();
 	}
 
 	if (hasWebGLSupportWithExtensions(['OES_texture_float', 'OES_texture_float_linear'])) {
 	    aquaMain();
 	}
-});
+}
 
 function resizeFishtank() {
 	var canvasEl = $('#tank-canvas')[0];

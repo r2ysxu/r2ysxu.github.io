@@ -9,6 +9,8 @@ function loaderHandler() {
 	$('.loader').addClass("fade");
 }
 
+$( document ).ready(loaderHandler);
+
 function openProject(projectId) {
 	currentProject = projectId;
 	var p_id = "#";
@@ -43,6 +45,12 @@ function openPrevProject() {
 	openProject(currentProject);
 }
 
+var initiated = false;
+
 function toggleFishes() {
+	if (initiated === false) {
+		loadFishTank();
+		initiated = true;
+	}
 	$('#tank-canvas').toggle();
 }
