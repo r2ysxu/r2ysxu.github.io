@@ -22,7 +22,7 @@ function loadFishTank() {
 
 	var aquaMain = function() {
 	    var canvasEl = $('#tank-canvas')[0];
-	    canvasEl.width = document.body.clientWidth;
+	    canvasEl.width = document.body.clientWidth + 15;
 	    tankRatio = canvasEl.width / canvasEl.height;
 
 	    var tank = new FishTank(canvasEl);
