@@ -34,6 +34,10 @@ td {
     vertical-align: top;
 }
 
+.content-font {
+    font-size: 14pt;
+}
+
 a:link {color:#2554C7;text-decoration:none;}
 
 .title-text {
@@ -41,6 +45,7 @@ a:link {color:#2554C7;text-decoration:none;}
 }
 
 .date-right {
+    font-size: 12pt;
     float: right;
 }
 
