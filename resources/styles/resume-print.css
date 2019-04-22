@@ -86,11 +86,11 @@ a:link {color:#2554C7;text-decoration:none;}
     width: 33%;
 }
 
-/* Qualification Web Related  */
-
 #education strong {
     font-size: 14pt;
 }
+
+/* Qualification Diagram Related */
 
 .webContainer {
     position: relative;
@@ -98,65 +98,28 @@ a:link {color:#2554C7;text-decoration:none;}
     height: 15em;
     margin-top: 1em;
     margin-bottom: -2em;
+    line-height: normal;
 }
 
-.webContent {
+.cd_component {
+    border : 1px solid #b6b6b6;
+    color: #000;
     position: absolute;
-    background: white;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.c1 {
-    font-size: 20pt;
-    z-index: 6;
+.cd_lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-.c2 {
-    font-size: 18pt;
-    z-index: 5;
-}
-
-.c3 {
-    font-size: 16pt;
-    z-index: 4;
-}
-
-.c4 {
-    font-size: 14pt;
-    z-index: 3;
-}
-
-.c5 {
-    font-size: 12pt;
-    z-index: 2;
-}
-
-.c6 {
-    font-size: 10pt;
-    z-index: 1;
-}
-
-.qTable {
-    margin: 0 auto;
-}
-
-.qTable td {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 1em;
-    padding-right: 1em;
-    text-align: left;
-}
-
-.qTable ul {
-    margin-top: 0;
-    margin-left: 0;
-}
-
-.qTable h4 {
-    margin-top: 0.2em;
-    margin-bottom: 0;
+.cd_component_no_border {
+    color: #000;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #experience {

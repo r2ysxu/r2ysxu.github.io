@@ -28,70 +28,101 @@
         </div>
         <div id="qualifications">
             <h2>Technologies</h2>
-            <div id="qualificationWebContainer_old" class="webContainer">
-
-                <span class="webContent c2" style="top: 19%; left: 9%;">
+            <div id="qualificationWebContainer" class="webContainer">
+                <svg class="cd_lines">
+                    <defs>
+                        <marker id="p1_arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#b6b6b6" />
+                        </marker>
+                    </defs>
+                    <line x1="272" y1="110" x2="419" y2="110" stroke="#b6b6b6" stroke-width="1" marker-end="url(#p1_arrow)" />
+                    <line x1="272" y1="150" x2="365" y2="150" stroke="#b6b6b6" stroke-width="1" />
+                    <line x1="365" y1="150" x2="365" y2="110" stroke="#b6b6b6" stroke-width="1" />
+                    <line x1="727" y1="110" x2="838" y2="110" stroke="#b6b6b6" stroke-width="1" marker-end="url(#p1_arrow)"/>
+                </svg> <!-- Lines -->
+                <div id="qcd_web" class="cd_component" style="width: 1100px; height: 70%;">
+                    <div id="qcd_client" class="cd_component" style="top:5px; left: 20px; width: 230px">
+                        <div>
+                            <strong>Javascript</strong>
+                            <br />
+                            <span>Angular</span>
+                            <span>React</span>
+                            <span>jQuery</span>
+                            <span>Node</span>
+                            <span>WebGL</span>
+                        </div>
+                        <strong>JSP / JSF</strong>
+                        <div>
+                            <strong>HTML</strong>
+                            <span>Responsive</span>
+                        </div>
+                        <strong>CSS</strong>
+                    </div>
+                    <div id="qcd_iot" class="cd_component" style="top: 140px; left: 20px; width: 230px">
+                        <strong>Android</strong>
+                    </div>
+                    <div id="qcd_client_interface" class="cd_component_no_border" style="top: 5px; left: 285px; width: 120px">
+                        <strong>HTTP</strong>
+                        <span>REST</span>
+                        <span>GraphQL</span>
+                        <span>AJAX</span>
+                        <span>Websocket</span>
+                        <span>JSON</span>
+                        <span>XML</span>
+                        <span>SOAP</span>
+                    </div>
+                    <div id="qcd_server" class="cd_component" style="top: 5px; left: 425px; width: 280px; height: 90%">
+                        <div>
+                            <strong>J2EE</strong>
+                            <br />
+                            <div>
+                                <span>Spring</span>
+                                <i style="font-size:11pt;">MVC, Security, Batch, AOP, Boot</i>
+                                <br />
+                            </div>
+                            <span>Play</span>
+                            <span>EJB</span>
+                            <span>Servlets</span>
+                            <span>JUnit</span>
+                            <span>AEM</span>
+                        </div>
+                        <div>
+                            <strong>C#</strong>
+                            <span>.NET</span>
+                        </div>
+                    </div>
+                    <div id="qcd_orm" class="cd_component_no_border" style="top: 30px; left: 735px; width: 50px">
+                        <span>JDBC</span>
+                        <span>Ebean</span>
+                        <span>Hibernate</span>
+                    </div>
+                    <div id="qcd_database" class="cd_component" style="top: 5px; left: 845px; width: 65px; height: 90%">
+                        <div>
+                            <strong>SQL</strong>
+                            <span>Postgres</span>
+                            <span>Oracle</span>
+                            <span>mySQL</span>
+                            <span>Sqlite</span>
+                            <span>T-SQL</span>
+                        </div>
+                    </div>
+                   <div id="qcd_server_conf" class="cd_component_no_border" style="top: 125px; left: 955px; width: 180px">
+                        <span>Maven</span>
+                        <span>gradle</span>
+                        <span>sbt</span>
+                        <span>OSGI</span>
+                    </div>
+                </div>
+                <div id="qcd_other" style="position: absolute; top: 72%; left: 70px">
+                    <span>Git</span>
+                    <span>SVN</span>
+                    <span>UML</span>
+                    <span>XSD</span>
+                </div>
+                <div class="cd_component_no_border" style="top:72%; left: 700px" >
                     <strong>C</strong>
-                </span>
-                <span class="webContent c3" style="top: 20%; left: 12%;">C++</span>
-
-                <span class="webContent c3" style="top: 22%;left: 17%;">JSF</span>
-                <span class="webContent c2" style="top: 21%; left: 21%;">JSP</span>
-                <span class="webContent c3" style="top: 21%; left: 26%;">JUnit</span>
-                <span class="webContent c1" style="top: 16%; left: 32%;">Servlets</span>
-                <span class="webContent c3" style="top: 21%; left: 43%;">AEM</span>
-                <span class="webContent c3" style="top: 10%; left: 44%;">Android</span>
-                <span class="webContent c3" style="top: 10%; left: 53%;">Responsive</span>
-                <span class="webContent c3" style="top: 20%; left: 49%;">Hibernate</span>
-                <span class="webContent c2" style="top: 19%; left: 59%">Oracle</span>
-                <span class="webContent c2" style="top: 19%; left: 67%;">Sqlite</span>
-                <span class="webContent c2" style="top: 18%; left: 74%;">
-                    <strong>MySQL</strong>
-                </span>
-                <span class="webContent c3" style="top: 30%; left: 10%;">Maven</span>
-                <span class="webContent c3" style="top: 33%; left: 18%;">OSGI</span>
-                <span class="webContent c5" style="top: 34%;left: 24%;">Struts</span>
-                <span class="webContent c2" style="top: 32%; left: 29%;">EJB 3</span>
-                <span class="webContent c1" style="top: 31%; left: 36%;">HTTP</span>
-                <span class="webContent c2" style="top: 32%; left: 44%;">Networking</span>
-                <span class="webContent c2" style="top: 32%; left: 58%;">REST</span>
-                <span class="webContent c2" style="top: 32%; left: 64.5%">AJAX</span>
-                <span class="webContent c1" style="top: 30%; left: 72%;">AngularJS</span>
-                <span class="webContent c1" style="top: 43%; left: 5%;">Spring (<i style="font-size:12pt;">MVC, Security, Batch, AOP, Boot</i>)</span>
-                <span class="webContent c1" style="top: 44%; left: 41%;">
-                    <strong>Java/J2EE</strong>
-                </span>
-                <span class="webContent c1" style="top: 45%; left: 56%;">jQuery</span>
-                <span class="webContent c1" style="top: 45%; left: 65%">
-                    <strong>JavaScript</strong>
-                </span>
-                <span class="webContent c3" style="top: 46%; left: 80%;">ReactJS</span>
-                <span class="webContent c2" style="top: 57%; left: 13%;">
-                    <strong>Git</strong>
-                </span>
-                <span class="webContent c4" style="top: 59%; left: 18%">SVN</span>
-                <span class="webContent c2" style="top: 59%; left: 23%;">Distributed Systems</span>
-                <span class="webContent c4" style="top: 62%; left: 46.5%;">SOAP</span>
-                <span class="webContent c1" style="top: 59%; left: 52%;">
-                    <strong>HTML</strong>
-                </span>
-                <span class="webContent c2" style="top: 60%; left: 61%">
-                    <strong>CSS 3</strong>
-                </span>
-                <span class="webContent c3" style="top: 60%; left: 69%;">Tomcat</span>
-                <span class="webContent c3" style="top: 60%; left: 77%">Glassfish</span>
-                <span class="webContent c2" style="top: 71%; left: 17%;">.NET</span>
-                <span class="webContent c3" style="top: 72%; left: 23%;">UML</span>
-                <span class="webContent c4" style="top: 74%; left: 28%">Websocket</span>
-                <span class="webContent c3" style="top: 74%; left: 38%">XML</span>
-                <span class="webContent c4" style="top: 75%; left: 43%">XSD</span>
-                <span class="webContent c1" style="top: 71%; left: 48%;">
-                    <strong>C#</strong>
-                </span>
-                <span class="webContent c4" style="top: 72%; left: 53%;">Websphere</span>
-                <span class="webContent c4" style="top: 72%;left: 63%;">Weblogic</span>
-                <span class="webContent c5" style="top: 72%;left: 72%;">IIS</span>
-                <span class="webContent c3" style="top: 70%; left: 75%;">WebGL</span>
+                    <strong>C++</strong>
+                </div>
             </div>
         </div>
         <h2>Education</h2>
