@@ -88,7 +88,7 @@
    right: 0;
    margin: auto;
    width: 30em;
-   top: 5em;
+   top: 25em;
 }
 
 #sky_name span {
@@ -242,6 +242,7 @@
 /* Qualifications */
 .qualificationContainer {
   margin-top: 14em;
+  margin-bottom: 5em;
   width: 100vw;
   height: 30em;
   position: relative;
@@ -290,6 +291,44 @@
   right: 0;
   margin: auto;
   text-align: center;
+}
+
+.bubbleFont_large {
+  font-size: 20pt;
+}
+
+.bubbleFont_medium {
+  font-size: 16pt;
+}
+
+#q_bubble_resume {
+  top: 7em;
+  left: 0;
+  right: 0;
+  width: 10em;
+  height: 10em;
+}
+
+#q_bubble2 {
+  top: -6em;
+  left: -9em;
+  right: 0;
+  width: 7em;
+  height: 7em;
+}
+
+#q_bubble3 {
+  top: -4em;
+  right: -5em;
+  width: 7em;
+  height: 7em;
+}
+
+#q_bubble4 {
+    top: 6em;
+    right: 9em;
+    width: 7em;
+    height: 7em;
 }
 
 /* Next & previous buttons */
@@ -373,12 +412,4 @@ footer {
 
 footer a {
   color: white;
-}
-
-/* Experimental */
-#toggle_fish {
-  top: 0;
-  right: 42%;
-  width: 7em;
-  height: 7em;
 }

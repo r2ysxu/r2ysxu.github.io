@@ -1,0 +1,265 @@
+<html>
+<head>
+    <title>Arthur Xu</title>
+    <link href="http://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/backdrop.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/animations.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/componentDiagram.css">
+    
+    <script type="text/javascript" src="scripts/lib/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</head>
+<body>
+    <div class="projectContainer">
+        <div class="projectCarousel">
+            <div class="projectContent">
+                <!-- Project stuff -->
+                <div id="pictoviewTextCell" class="swipe" style="">
+                    <div id="pictoviewDescription" class="projectInfo" style="">
+                        <h1>Picture Viewer Repository</h1>
+                        <p><img id="pictoviewLogo" src="resources/images/pictoview-logo.png" class="projectLogo" alt="Pictoview" />Pictoview is a central photos (and later songs/videos) repository. It allows viewers to access their photos in an organized and easy to use manner. It includes the ability to add customized tags to albums and later search upon those tags. The app allows users to store images in a centralized database without having to store the data on their devices.</p>
+                        <p>It started as a means for me to store my large repository of pictures and organize them in a manageable fashion without having to store all the pictures on my mobile devices.</p>
+                        <h2>Technologies</h2>
+                        <p>J2EE, SpringMVC, REST, EJB, Sqlite, HTML5, CSS3, Javascript, AngularJS, jQuery, Android</p>
+                        <h2>Design</h2>
+                        <p>The project is divided into three Components, the client, the request server, and the Enterprise Java Bean.</p>
+                        <div id="project_component_1" class="component_container">
+                            <svg class="cd_lines">
+                                <defs>
+                                    <marker id="p1_arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#FFF" />
+                                    </marker>
+                                </defs>
+                                <line x1="146" y1="150" x2="109" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="146" y1="250" x2="119" y2="250" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="219" y1="150" x2="215" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="250" y1="170" x2="250" y2="174" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="250" y1="220" x2="250" y2="224" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="330" y1="150" x2="320" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="430" y1="110" x2="424" y2="110" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="436" y1="200" x2="424" y2="200" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="485" y1="232" x2="485" y2="227" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="600" y1="250" x2="579" y2="250" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                                <line x1="570" y1="110" x2="566" y2="110" stroke="#FFF" stroke-width="1" marker-end="url(#p1_arrow)" />
+                            </svg> <!-- Lines -->
+                            <div id="p1_db" class="cd_component cd_db" style="top:130px; left: 5px">
+                                <div class="cd_header">Database</div>
+                            </div>
+                            <div id="p1_fs" class="cd_component" style="top:230px; left: 5px">
+                                <div class="cd_header">Filesystem</div>
+                            </div>
+                            <div id="p1_ejb" class="cd_component" style="top: 90px;left:140px;width:150px;height:200px">
+                                <div class="cd_header">EJB</div>
+                                <div class="cd_component" style="top:40px; left:5px">
+                                    <div class="cd_header">DAO</div>
+                                </div>
+                                <div class="cd_component" style="top:40px; left:77px">
+                                    <div class="cd_header">Beans</div>
+                                </div>
+                                <div class="cd_component" style="top:90px;left:5px">
+                                    <div class="cd_header">Image Processor</div>
+                                </div>
+                                <div class="cd_component" style="top:140px;left:5px">
+                                    <div class="cd_header">File Manager</div>
+                                </div>
+                            </div>
+                            <div id="p1_lb" class="cd_component" style="top:90px; left: 330px; height:200px; width: 65px;">
+                                <div class="cd_header">Load Balancer</div>
+                            </div>
+                            <div id="p1_rs" class="cd_component" style="top:80px; left: 430px;">
+                                <div class="cd_header">REST Server</div>
+                                <div class="cd_content">Jersey</div>
+                            </div>
+                            <div id="p1_ws" class="cd_component" style="top: 140px; left: 430px; height: 150px; width: 130px">
+                                <div class="cd_header">Web Server</div>
+                                <div class="cd_content" style="margin-top:100px">Spring</div>
+                                <div class="cd_component" style="top:40px; left: 5px">
+                                    <div class="cd_header">Controller</div>
+                                </div>
+                                <div class="cd_component" style="top:90px; left: 5px">
+                                    <div class="cd_header">Authenticator</div>
+                                </div>
+                            </div>
+                            <div id="p1_android" class="cd_component" style="top: 90px; left: 570px;">
+                                <div class="cd_header">Android</div>
+                            </div>
+                            <div id="p1_page" class="cd_component" style="top: 140px; left: 600px; height: 150px; width: 150px">
+                                <div class="cd_header">Page</div>
+                                <div class="cd_component" style="top:45px; left: 5px">
+                                    <div class="cd_header">HTML</div>
+                                </div>
+                                <div class="cd_component" style="top:90px; left: 5px">
+                                    <div class="cd_header">Javascript</div>
+                                    <div class="cd_content">AngularJS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Client</h3>
+                        <h4>Android</h4>
+                            <p>The Android client uses volley to send HTTP requests to retrieve informations &amp; photos from the server using REST-ful API. <i>(Currently in development)</i></p>
+                        <h4>Browser</h4>
+                            <p>The browser is partially generated HTML page via JSP, with dynamically generated content via Ajax calls. Uses AngularJS to bind data to the page. Mobile version of page uses jQuery.</p>
+                        <h3>Server</h3>
+                        <h4>Spring</h4>
+                            <p>Uses Spring MVC to generate client JSP pages as well as Ajax JSON responses. Images are send via output streams.
+                            </p>
+                        <h4>REST</h4>
+                            <p>Uses JAX-RS to supply API calls to the client. The information is taken from the enterprise bean.</p>
+                        <h4>EJB</h4>
+                        <p>The EJB provides access to the database which stores all the images and their information</p>
+                        <hr />
+                        <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu-Pictoview">github.com</a></p>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <div id="chitchatTextCell" class="swipe" style="display:none;">
+                    <div id="chitchatDescription" class="projectInfo">
+                        <h1>Chitchat</h1>
+                        <p><img id="chitchatLogo" src="resources/images/chitchat-logo.png" class="projectLogo" alt="Ovaflow" /> Chit-chat is an interactive chat-room where participants can talk to each other. Aside from being able to talk to each other, they can also walk and jump around in their avatars which can be seen by other participants.</p>
+                        <p>This started as a one day/night experiment where I wanted to learn about Java Websockets as well as WebGL. </p>
+                        <p>The sprites are not drawn by me and will be replaced upon request from the original author. This is a simple exerpiment and I do not intend to infringe on any copyright.</p>
+                        <div class="demoDiv">
+                            <iframe  width="560" height="315" src="https://www.youtube.com/embed/4ql2x26BTf4" allowfullscreen></iframe>
+                        </div>
+                        <h2>Technologies</h2>
+                        <p>J2EE, Websocket, WebGL, ThreeJS, HTML5, CSS3</p>
+                        <h2>Design</h2>
+                        <p>The web application is developed using websockets using javascript to connect to a Java Websocket service.</p>
+                        <div id="project_component_2" class="component_container">
+                            <svg class="cd_lines">
+                                <defs>
+                                    <marker id="p2_arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#FFF" />
+                                    </marker>
+                                </defs>
+                                <line x1="231" y1="180" x2="398" y2="180" stroke="#FFF" stroke-width="1" marker-end="url(#p2_arrow)" />
+                                <line x1="398" y1="180" x2="239" y2="180" stroke="#FFF" stroke-width="1" marker-end="url(#p2_arrow)" />
+                            </svg> <!-- Lines -->
+                            <div id="p2_wss" class="cd_component" style="width:200px; height:200px; left:10px; top: 40px;">
+                                <div class="cd_header">Server</div>
+                                <div style="padding-left: 10px; margin-top: 0;">
+                                    <div class="cd_content">Websocket</div>
+                                </div>
+                            </div>
+                            <div id="p2_page" class="cd_component" style="left: 400px; top: 40px; width:150px; height:200px">
+                            <div class="cd_header">Page</div>
+                            <div class="cd_component" style="top:40px; left: 5px">
+                                <div class="cd_header">HTML5</div>
+                                <div class="cd_content">Canvas</div>
+                            </div>
+                            <div class="cd_component" style="top:120px; left: 5px">
+                                <div class="cd_header">Javascript</div>
+                                <div class="cd_content">WebGL</div>
+                                <div class="cd_content">Websocket</div>
+                            </div>
+                        </div>
+                        <!-- Response Types -->
+                        <div class="cd_data" style="left: 280px; top: 150px;">Websocket</div>
+                    </div>
+                        <h3>Client</h3>
+                        <p>The client consists of HTML5 components. Javascripts using WebGL as well as AJAX calls to the websocket. JSON is (temporarily) used to convey all messages. (In the future, I would like to send encoded byte streams)</p>
+                        <h3>Server</h3>
+                        <p>The server uses Java Websockets to relay messages to all participating parties by encapsulating them through JSON request/responses</p>
+                        <hr />
+                        <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu/Chitchat">github.com</a></p>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <div id="ovaflowTextCell" class="swipe" style="display:none;">
+                    <div id="ovaflowDescription" class="projectInfo">
+                        <h1>Ovaflow</h1>
+                        <p><img id="ovaflowLogo" src="resources/images/ovaflow-logo.png" class="projectLogo" alt="ovaflow" />Ovaflow is a light-weight rhythm game fueled by the user community. (similar to step-mania) Currently developed for the Android platform only. The objective of the game is to press the correct sequence of keys or buttons as notes cascade down the screen towards a special buttons on the screen. The game&#39;s score will be calculated based on the accuracy of the button presses atop some precision tolerance, and might end prematurely if the user makes too many errors. The differentiating factor is that all the "beatmaps" are created by users which may be uploaded onto the central repository and downloaded along with avatars.</p>
+                        <p>What started as a simple prototype for a class ended as a fully functional game. I was primarily responsible for the Android platform but also built up the initial framework for the server</p>
+                        <div class="demoDiv">
+                            <iframe  width="560" height="315" src="https://www.youtube.com/embed/1MVlc_PlqHs" allowfullscreen></iframe>
+                        </div>
+                        <h2>Technologies</h2>
+                        <p>J2EE, Android, OpenGL ES 2.0, REST, Sqlite, MySQL</p>
+                        <h2>Design</h2>
+                        <p>The project is divided into two parts, the Android platform (Client) and the server repository.</p>
+                        <div id="project_component_3" class="component_container">
+                            <svg class="cd_lines">
+                                <defs>
+                                    <marker id="p3_arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="#FFF" />
+                                    </marker>
+                                </defs>
+                                <line x1="146" y1="150" x2="109" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="146" y1="250" x2="119" y2="250" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="219" y1="150" x2="215" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="250" y1="170" x2="250" y2="174" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="250" y1="220" x2="250" y2="224" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="330" y1="150" x2="320" y2="150" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="436" y1="190" x2="424" y2="190" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                                <line x1="500" y1="260" x2="500" y2="264" stroke="#FFF" stroke-width="1" marker-end="url(#p3_arrow)" />
+                            </svg> <!-- Lines -->
+                            <div id="p3_db" class="cd_component cd_db" style="top:130px; left: 5px">
+                                <div class="cd_header">Database</div>
+                            </div>
+                            <div id="p3_fs" class="cd_component" style="top:230px; left: 5px">
+                                <div class="cd_header">Filesystem</div>
+                            </div>
+                            <div id="p3_rs" class="cd_component" style="top: 90px; left: 140px; width: 150px; height: 240px">
+                                <div class="cd_header">REST Server</div>
+                                <div class="cd_content" style="margin-top:160px">Jersey</div>
+                                <div class="cd_content" >Spring</div>
+                                <div class="cd_component" style="top:40px; left: 5px">
+                                    <div class="cd_header">DAO</div>
+                                </div>
+                                <div class="cd_component" style="top:40px; left: 77px">
+                                    <div class="cd_header">Beans</div>
+                                </div>
+                                <div class="cd_component" style="top:90px; left: 5px">
+                                    <div class="cd_header">File Processor</div>
+                                </div>
+                                <div class="cd_component" style="top:140px; left: 5px">
+                                    <div class="cd_header">File Manager</div>
+                                </div>
+                            </div>
+                            <div id="p3_lb" class="cd_component" style="top: 90px; left: 330px; height:200px; width: 65px;">
+                                <div class="cd_header">Load Balancer</div>
+                            </div>
+                            <div id="p3_android" class="cd_component" style="top: 90px; left: 430px; height: 250px; width: 200px">
+                                <div class="cd_header">Android</div>
+                                <div class="cd_component" style="top:40px; left: 5px">
+                                    <div class="cd_header">Local Storage Manager</div>
+                                </div>
+                                <div class="cd_component" style="top:80px; left: 5px">
+                                    <div class="cd_header">Dispatcher</div>
+                                </div>
+                                <div class="cd_component" style="top:130px; left: 5px">
+                                    <div class="cd_header">Game Controller</div>
+                                </div>
+                                <div class="cd_component" style="top:180px; left: 5px">
+                                    <div class="cd_header">Game Renderer</div>
+                                    <div class="cd_content">OpenGL ES</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Client</h3>
+                        <p>The Client only supports Android devices. The rendering is done by using OpenGL ES 2.0. The rendering is displayed via a SurfaceView. The downloading of songs is done by sending REST-ful requests to the server and using <i>AsyncTasks</i> to fetch the songs over a stream.</p>
+                        <h3>Server</h3>
+                        <p>The server provides the user high scores, avatars, and a song repository accessed via JAX-RS</p>
+                        <hr />
+                        <p><strong>Code : </strong><a target=_parent href="https://github.com/r2ysxu/Ovaflow-Android">github.com</a></p>
+                        <br/>
+                        <br/>
+                    </div>
+                    <!-- End Projects -->
+                </div>
+            </div>
+        </div>
+        <div class="prev" onclick="openPrevProject()">&#10094;</div>
+        <div class="next" onclick="openNextProject()">&#10095;</div>
+        <div class="projectCarouselControl">
+            <span class="dot active" onclick="openProject(0)"></span> 
+            <span class="dot" onclick="openProject(1)"></span> 
+            <span class="dot" onclick="openProject(2)"></span> 
+        </div>
+    </div>
+</body>
+</html>
