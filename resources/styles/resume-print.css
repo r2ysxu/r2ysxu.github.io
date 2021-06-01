@@ -6,41 +6,79 @@ body {
     font-size: 12pt;
 }
 
-ul {
-    margin-top: 1px;
-    padding-top: 2px;
-    margin-bottom: 7px;
-    padding-bottom: 2px;
-    width: 70%;
+.title-text {
+    font-size: 32pt;
+    margin: 25px;
 }
 
-ul li {
-    padding-top: 2px;
-    padding-bottom: 2px;
+.header {
+    text-align: center;
+    width: 100%;
+    position: relative;
 }
 
-h2 {
-    padding-right: 5px;
-    padding-bottom: 1px;
-    margin-bottom: 5px;
-    margin-top: 0;
-    border-bottom: 2px ridge;
+.contact-bar {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    font-size: 14pt;
 }
 
-td {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    vertical-align: top;
+.contact-bar a {
+    text-decoration: none;
+}
+
+.contact-bar img {
+    height: calc(100% - 10px);
+    margin: 5px;
+    float: left;
+}
+
+.content {
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.content h1 {
+    margin: 2em 0 0.6em 0;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.skills {
+    margin-left: 0px;
+    margin-right: 2em;
+}
+
+.skills h3,h4 {
+    margin: 3px 3px;
+}
+
+.skills span {
+    margin: 0 5px 0 10px;
+}
+
+.left-flex-align {
+    margin-right: 20px;
+}
+
+.bottom-margin {
+    margin-bottom: 10px;
+}
+
+.line {
+    border: 1px solid #afafaf;
+    margin: 15px 0;
 }
 
 .content-font {
     font-size: 14pt;
-}
-
-a:link {color:#2554C7;text-decoration:none;}
-
-.title-text {
-    font-size: 32pt;
 }
 
 .date-right {
@@ -54,102 +92,4 @@ a:link {color:#2554C7;text-decoration:none;}
 
 .double-indented {
     padding-left: 30px;
-}
-
-#name {
-    text-align: center;
-    padding-bottom: 5px;
-}
-
-#header {
-    margin-bottom: 15px;
-}
-
-#personal-info {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    text-align: right;
-    margin-right: 15px;
-    font-size: 14pt;
-}
-
-#personal-info td {
-    width: 25%;
-}
-
-#technologies {
-    width: 100%;
-}
-
-#technologies td {
-    width: 33%;
-}
-
-#education strong {
-    font-size: 14pt;
-}
-
-/* Qualification Diagram Related */
-
-.webContainer {
-    position: relative;
-    width: 100%;
-    height: 15em;
-    margin-top: 1em;
-    margin-bottom: -2em;
-    line-height: normal;
-}
-
-.cd_component {
-    border : 1px solid #b6b6b6;
-    color: #000;
-    position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.cd_lines {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.cd_component_no_border {
-    color: #000;
-    position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-#experience {
-}
-
-.experience-type {
-    margin-left: 2em;
-}
-
-.experience-type-title {
-    margin-left: 1em;
-}
-
-.experience-type p {
-    margin-top: 0;
-}
-
-.experience-type span {
-    font-size: 16pt;
-}
-
-.experience-type label {
-    visibility: hidden;
-}
-
-.noshow {
-    visibility: hidden;
-}
-
-.center {
-    width: 50%;
-    margin: auto;
 }

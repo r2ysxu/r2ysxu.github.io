@@ -5,243 +5,180 @@
         <link rel="stylesheet" type="text/css" href="resources/styles/resume-print.css">
     </head>
     <body>
-        <div id="header">
-            <div id="name">
-                <span class="title-text"><strong>Arthur Xu</strong></span>
-            </div>
-            <table id="personal-info">
-                <tbody>
-                    <tr>
-                        <td><a href="mailto:r2ysxu@gmail.com">r2ysxu@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>(925) 548 - 7588</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.github.com/r2ysxu">github.com/r2ysxu</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="http://r2ysxu.github.io">r2ysxu.com</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="qualifications">
-            <h2>Technologies</h2>
-            <div id="qualificationWebContainer" class="webContainer">
-                <svg class="cd_lines">
-                    <defs>
-                        <marker id="p1_arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
-                            <path d="M0,0 L0,6 L9,3 z" fill="#b6b6b6" />
-                        </marker>
-                    </defs>
-                    <line x1="272" y1="110" x2="419" y2="110" stroke="#b6b6b6" stroke-width="1" marker-end="url(#p1_arrow)" />
-                    <line x1="272" y1="150" x2="365" y2="150" stroke="#b6b6b6" stroke-width="1" />
-                    <line x1="365" y1="150" x2="365" y2="110" stroke="#b6b6b6" stroke-width="1" />
-                    <line x1="727" y1="110" x2="838" y2="110" stroke="#b6b6b6" stroke-width="1" marker-end="url(#p1_arrow)"/>
-                </svg> <!-- Lines -->
-                <div id="qcd_web" class="cd_component" style="width: 1065px; height: 70%;">
-                    <div id="qcd_client" class="cd_component" style="top:5px; left: 20px; width: 230px">
-                        <div>
-                            <strong>Javascript</strong>
-                            <br />
-                            <span>Angular</span>
-                            <span>React</span>
-                            <span>jQuery</span>
-                            <span>Node</span>
-                            <span>WebGL</span>
-                        </div>
-                        <strong>JSP / JSF</strong>
-                        <div>
-                            <strong>HTML</strong>
-                            <span>Responsive</span>
-                        </div>
-                        <strong>CSS</strong>
-                    </div>
-                    <div id="qcd_iot" class="cd_component" style="top: 140px; left: 20px; width: 230px">
-                        <strong>Android</strong>
-                    </div>
-                    <div id="qcd_client_interface" class="cd_component_no_border" style="top: 5px; left: 285px; width: 120px">
-                        <strong>HTTP</strong>
-                        <span>REST</span>
-                        <span>GraphQL</span>
-                        <span>AJAX</span>
-                        <span>Websocket</span>
-                        <span>JSON</span>
-                        <span>XML</span>
-                        <span>SOAP</span>
-                    </div>
-                    <div id="qcd_server" class="cd_component" style="top: 5px; left: 425px; width: 280px; height: 90%">
-                        <div>
-                            <br />
-                            <strong>J2EE</strong>
-                            <br />
-                            <div>
-                                <span>Spring</span>
-                                <i style="font-size:11pt;">MVC, Security, Batch, AOP, Boot</i>
-                                <br />
-                            </div>
-                            <span>Play</span>
-                            <span>EJB</span>
-                            <span>Servlets</span>
-                            <span>JUnit</span>
-                            <span>AEM</span>
-                        </div>
-                        <div><strong>Hack</strong></div>
-                        <div>
-                            <strong>C#</strong>
-                            <span>.NET</span>
-                        </div>
-                    </div>
-                    <div id="qcd_orm" class="cd_component_no_border" style="top: 30px; left: 735px; width: 50px">
-                        <span>JDBC</span>
-                        <span>Ebean</span>
-                        <span>Hibernate</span>
-                    </div>
-                    <div id="qcd_database" class="cd_component" style="top: 5px; left: 845px; width: 65px; height: 90%">
-                        <div>
-                            <strong>SQL</strong>
-                            <span>Postgres</span>
-                            <span>Oracle</span>
-                            <span>mySQL</span>
-                            <span>Sqlite</span>
-                            <span>T-SQL</span>
-                        </div>
-                    </div>
-                   <div id="qcd_server_conf" class="cd_component_no_border" style="top: 125px; left: 955px; width: 125px">
-                        <span>Maven</span>
-                        <span>gradle</span>
-                        <span>sbt</span>
-                        <span>OSGI</span>
-                    </div>
+        <div class="header">
+            <div class="title-text"><strong>Arthur Xu</strong></div>
+            <div class="contact-bar">
+                <div>
+                    <img src="resources/images/icons/envelope-icon.svg" alt="email" />
+                    <a href="mailto:r2ysxu@gmail.com">r2ysxu@gmail.com</a>
                 </div>
-                <div id="qcd_other" style="position: absolute; top: 72%; left: 70px">
+                <div>
+                    <img src="resources/images/icons/telephone-icon.svg" alt="phone" />
+                    <span>(925) 548 - 7588</span>
+                </div>
+                <div>
+                    <img src="resources/images/icons/globe-icon.svg" alt="phone" />
+                    <a href="http://r2ysxu.github.io">r2ysxu.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <h1>Skills</h1>
+                <div class="skills">
+                    <h3>HTML</h3>
+                    <span>CSS</span>
+                    <span>Responsive</span>
+                    <h3>Javascript</h3>
+                    <span>React</span>
+                    <span>Redux</span>
+                    <span>Angular</span>
+                    <span>jQuery</span>
+                    <span>JSON</span>
+                    <span>AJAX</span>
+                    <span>WebGL</span>
+                    <div class="line"></div>
+                    <h3>REST</h3>
+                    <h3>GraphQL</h3>
+                    <span>Relay</span>
+                    <span>Apollo</span>
+                    <div class="line"></div>
+                    <h3>Java</h3>
+                    <span>J2EE</span>
+                    <span>Spring</span>
+                    <span>Play</span>
+                    <span>EJB</span>
+                    <span>Hibernate/JPA</span>
+                    <span>Ebean</span>
+                    <span>Maven</span>
+                    <span>Gradle</span>
+                    <span>JSP/JSF</span>
+                    <span>Kafka</span>
+                    <span>Android</span>
+                    <h3>Hack</h3>
+                    <h3>NodeJS</h3>
+                    <h3>C#</h3>
+                    <span>.NET</span>
+                    <div class="line"></div>
+                    <h3>SQL</h3>
+                    <span>mySQL</span>
+                    <span>Postgres</span>
+                    <span>Sqlite</span>
+                    <span>H2</span>
+                    <span>Oracle</span>
+                    <span>T-SQL</span>
+                    <div class="line"></div>
+                    <h3>Source Control</h3>
                     <span>Git</span>
                     <span>SVN</span>
-                    <span>UML</span>
-                    <span>XSD</span>
+                    <span>Hg</span>
+                    <div class="line"></div>
+                    <h3>Deployment</h3>
+                    <span>Jenkins</span>
+                    <span>Docker</span>
                 </div>
-                <div class="cd_component_no_border" style="top:72%; left: 700px" >
-                    <strong>C</strong>
-                    <strong>C++</strong>
+                <div>
+                    <h1>Education</h1>
+                    <div>
+                        <h2>University of Waterloo</h2>
+                        <div class="date-right left-flex-align">Jun 2015</div>
+                        <div class="indented">
+                            <span>Computer Science, <br/> Economics Minor, <br/> Co-operative Program</span>
+                        </div>
+                        <ul></ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <h2>Work Experience</h2>
-        <div id="experience" class="indented content-font">
-            <div class="experience-type">
-                <strong>Facebook</strong>
-                <i class="experience-type-title">Software Engineer (Partnerships)</i>
-                <div class="date-right">Nov 2019 - Feb 2021</div>
-                <ul>
-                    <li>Designed and built platform tools aimed at increasing return of investments from external partners including contracts, notifications, action framework and framework to manage partners.</li>
-                    <li>Built tools to manage Facebook News curation</li>
-                    <li>Worked cross functionally with different stakeholders to drive requirements</li>
-                </ul>
-                <p>
-                    <span><strong>&#8231;</strong></span>
-                    <i>React, GraphQL, Hack</i>
-                    <span><strong>&#8231;</strong></span>
+                <div>
+                    <h2>
+                        <span>Coops</span>
+                            <div class="date-right">
+                                <span class="content-font">
+                                    <strong>&#8231;</strong><i> 2 years </i><strong>&#8231;</strong>
+                                </span>
+                            </div>
+                    </h2>
+                    <div class="date-right"><i>4 month terms</i></div>
                     <br />
-                </p>
-            </div>
-            <div class="experience-type">
-                <strong>HintMD</strong>
-                <i class="experience-type-title">Senior Software Engineer</i>
-                <div class="date-right">Oct 2017 - Oct 2019</div>
-                    <br />
-                    Bay area start-up developing SaaS subscription e-commerce &amp; payment platform for aesthetics
-                <ul>
-                    <li>Full stack development for building out key features including checkout, refunds, payments, rewards and 3rd party vendor integration</li>
-                    <li>Lead Rewards Program Integration Project</li>
-                    <li>Designed &amp; architected early stages of feature development</li>
-                    <li>Profiled &amp; optimized database and server performance</li>
-                </ul>
-                <p>
-                    <span><strong>&#8231;</strong></span>
-                    <i>J2EE, Play, GraphQL, React, Redux, Ebean, Postgres, NodeJS</i>
-                    <span><strong>&#8231;</strong></span>
-                    <br />
-                </p>
-            </div>
-            <div class="experience-type">
-                    <strong>SapientRazorfish</strong>
-                    <i class="experience-type-title">Full Stack Web Developer</i>
-                    <div class="date-right">Mar 2016 - June 2017</div>
-                        <br />
-                        Technology solutions company specialized in building web based e-commerce platforms
-                    <ul>
-                        <li>Developed lottery corporation website with e-commerce, fund transfers, self-exclusion and winning number feed capabilities</li>
-                    </ul>
-                    <p>
+                    <div class="indented coop-type content-font">
+                        <span>Citi</span>
                         <span><strong>&#8231;</strong></span>
-                        <i>J2EE, Adobe Experience Manager, KnockoutJS, jQuery, HTML5, CSS3</i>
+                        <span>Desire2Learn</span>
                         <span><strong>&#8231;</strong></span>
                         <br />
-                    </p>
+                        <span>Marsh &amp; McLennan Companies</span>
+                        <br />
+                        <span><strong>&#8231;</strong></span>
+                        <span>Nav Canada</span>
+                        <span><strong>&#8231;</strong></span>
+                        <span>Bronte College</span>
+                        <span><strong>&#8231;</strong></span>
+                        <br />
+                        <span>Fisheries and Oceans Canada</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <h2>Education</h2>
-        <div id="education" class="indented content-font">
-            <strong>University of Waterloo</strong>
-            <div class="date-right">Class of 2015</div>
-            <br />
-            <span class="double-indented">Computer Science, Economics Minor, Co-operative Program</span>
-            <ul></ul>
-        </div>
-        <h2>Coop / Internships</h2>
-        <div id="coop-experience" class="indented content-font">
-            <div class="experience-type">
-                <strong>Citi</strong>
-                <div class="date-right">Jan 2014 - Apr 2014</div>
-                <span><strong>&#8231;</strong></span>
-                    Prime finance application
-                <br />
-                <strong>Marsh &amp; McLennan Companies</strong>
-                <div class="date-right">Apr 2013 - Aug 2013</div>
-                <span><strong>&#8231;</strong></span>
-                    Invoicing &amp; brokerage application
-                <br />
-                <strong>Desire2Learn</strong>
-                <div class="date-right">Sept 2012 - Dec 2012</div>
-                <span><strong>&#8231;</strong></span>
-                        E-Learning platform
-                <br />
-                <strong>Nav Canada</strong>
-                <div class="date-right">Jan 2012 - Apr 2012</div>
-                <span><strong>&#8231;</strong></span>
-                    Flight strip information &amp; build distribution tools
-                <br />
-                <strong>Bronte College</strong>
-                <div class="date-right">Apr 2011 - Aug 2011</div>
-                <span><strong>&#8231;</strong></span>
-                    Student enrollment &amp; information CRM
-                <br />
-                <strong>Fisheries and Oceans Canada</strong>
-                <div class="date-right">Sept 2010 - Dec 2010</div>
-                <span><strong>&#8231;</strong></span>
-                    Ocean biochemical scientific query application
-                <br />
+            <div>
+                <div>
+                    <h1>Work Experience</h1>
+                    <div class="indented content-font">
+                        <div class="experience-type">
+                            <strong>Facebook</strong>
+                            <i class="experience-type-title">Software Engineer - Partnerships</i>
+                            <div class="date-right">Nov 2019 - Feb 2021</div>
+                                <br />
+                                Social media company
+                            <ul>
+                                <li>Designed and built platform tools aimed at increasing return of investments from external partners including contracts, notifications, action framework and framework to manage partners.</li>
+                                <li>Built tools to manage Facebook News curation</li>
+                                <li>Worked cross functionally with different stakeholders to drive requirements</li>
+                            </ul>
+                        </div>
+                        <div class="experience-type">
+                            <strong>HintMD</strong>
+                            <i class="experience-type-title">Senior Software Engineer</i>
+                            <div class="date-right">Oct 2017 - Oct 2019</div>
+                                <br />
+                                Bay area start-up developing SaaS subscription e-commerce &amp; payment platform for aesthetics
+                            <ul>
+                                <li>Full stack development for building out key features including checkout, refunds, payments, rewards and 3rd party vendor integration</li>
+                                <li>Lead Rewards Program Integration Project</li>
+                                <li>Designed &amp; architected early stages of feature development</li>
+                                <li>Profiled &amp; optimized database and server performance</li>
+                            </ul>
+                        </div>
+                        <div class="experience-type">
+                                <strong>SapientRazorfish</strong>
+                                <i class="experience-type-title">Full Stack Web Developer</i>
+                                <div class="date-right">Mar 2016 - Jun 2017</div>
+                                    <br />
+                                    Technology solutions company specialized in building web based e&#8209;commerce platforms
+                                <ul>
+                                    <li>Developed lottery corporation website with e-commerce, fund transfers, self-exclusion and winning number feed capabilities</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Personal Projects</h1>
+                    <div class="indented content-font">
+                        <strong>Picture Viewer Repository</strong>
+                        <div class="date-right">Apr 2015</div>
+                        <div class="double-indented bottom-margin">
+                            <span>a social image album repository for storing and sharing of images across friends and other subscriber.</span>
+                        </div>
+                        <strong>Ovaflow</strong>
+                        <div class="date-right">June 2014</div>
+                        <div class="double-indented bottom-margin">
+                            <span>an Android music game which downloads songs from a central repository</span>
+                        </div>
+                        <strong>Chit-chat</strong>
+                        <div class="date-right">Mar 2014</div>
+                        <div class="double-indented bottom-margin">
+                            <span>a simple web-based chat room with animations</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br />
-        <h2>Personal Projects</h2>
-        <div id="personalExperience" class="indented content-font">
-            <b>Picture Viewer Repository</b>: a social image album repository for storing and <br/> &nbsp;&nbsp;sharing of images across friends and other subscriber.
-            <div class="date-right">
-                Apr 2015
-            </div>
-            <div />
-            <b>Ovaflow</b>: an Android music game which downloads songs from a central repository
-            <div class="date-right">
-                June 2014
-            </div>
-            <div />
-            <b>Chit-chat</b>: a simple web-based chat room with animations
-            <div class="date-right">
-                Mar 2014
-            </div>
-            <div />
         </div>
     </body>
 </html>
