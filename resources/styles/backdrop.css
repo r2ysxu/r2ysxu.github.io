@@ -89,6 +89,7 @@
    margin: auto;
    width: 30em;
    top: 5em;
+   user-select: none;
 }
 
 #sky_name span {
