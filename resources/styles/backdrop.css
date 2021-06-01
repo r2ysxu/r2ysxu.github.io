@@ -88,7 +88,7 @@
    right: 0;
    margin: auto;
    width: 30em;
-   top: 25em;
+   top: 5em;
 }
 
 #sky_name span {
@@ -145,6 +145,7 @@
   box-shadow: inset -6px -6px 25px, 1px 1px 5px;
   z-index: 1;
   transition: 1s;
+  background-color: rgba(86, 162, 224, 0.8);
 }
 
 .bubble span {
@@ -163,7 +164,7 @@
 
 .bubble:hover {
   /*box-shadow: inset -6px -6px 25px rgb(21, 50, 78), 5px 5px 5px; */
-  background-color: rgba(9, 27, 49, 0.5);
+  background-color: rgba(9, 27, 49, 0.8);
 }
 
 .bubble a {
@@ -202,6 +203,7 @@
   top: calc(80% + 180px);
   left: 0;
   width: 100%;
+  height: 30em;
   /*background: radial-gradient(circle at center -100%, rgb(30, 83, 117), rgb(9, 23, 31) 70%);*/
   background: url('../images/underwater-ocean.jpg');
   background-attachment: fixed;
@@ -209,23 +211,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-}
-
-#underwater:before {
-  position: absolute;
-  top: -100%;
-  width: 200%;
-  height: 300%;
-  content:"";
-  background: url('../images/sunken_ship.png') 400px 0px no-repeat;
-  background-attachment: fixed;
-  background-size: 400px 300px;
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-  opacity: 0.2;
 }
 
 .sunkenMonitor {
@@ -241,8 +226,7 @@
 
 /* Qualifications */
 .qualificationContainer {
-  margin-top: 14em;
-  margin-bottom: 5em;
+  margin-top: 20em;
   width: 100vw;
   height: 30em;
   position: relative;
