@@ -42,8 +42,16 @@ body {
     grid-template-columns: 30% 70%;
 }
 
-.content h1 {
+.left-side-content h1 {
     margin: 2em 0 0.6em 0;
+}
+
+.right-side-content h1 {
+    margin: 2em 0 0.6em 0;
+}
+
+.bottom-section h1 {
+    margin: 0 0 0.6em 0;
 }
 
 .content h2 {
@@ -65,7 +73,8 @@ body {
 }
 
 .experience-type ul {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 .left-flex-align {
@@ -74,6 +83,10 @@ body {
 
 .bottom-margin {
     margin-bottom: 10px;
+}
+
+.unbolden {
+     font-weight: normal;
 }
 
 .line {
